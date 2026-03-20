@@ -1,0 +1,64 @@
+id: com.gointerop.biometria.fhir
+canonical: https://biometria.gointerop.com/fhir
+url: https://biometria.gointerop.com/fhir/ImplementationGuide/com.gointerop.biometria.fhir
+name: BiometriaIG
+title: "Guia de Implementação FHIR R4 para Biometria Facial de Beneficiários"
+description: >
+  Guia de implementação FHIR R4 para uso de biometria facial na identificação de beneficiários
+  de planos privados de saúde em Prestadores e Operadoras, conforme norma orientativa ANS v5.
+status: active
+license: CC0-1.0
+date: 2026-03-20T00:00:00.000Z
+version: 0.1.0
+fhirVersion: 4.0.1
+copyrightYear: 2026+
+releaseLabel: STU1
+publisher:
+  name: GOInterop Tecnologia LTDA
+  url: https://gointerop.com
+  email: contato@gointerop.com
+contact:
+  - name: Italo Macedo
+    telecom:
+      - system: email
+        value: italo@gointerop.com
+        use: work
+  - name: Claudio Junior
+    telecom:
+      - system: email
+        value: claudio@gointerop.com
+  - name: Fernando Araujo
+    telecom:
+      - system: email
+        value: fernando@gointerop.com
+jurisdiction: urn:iso:std:iso:3166#BR "Brazil"
+dependencies:
+  hl7.fhir.uv.ips: 1.1.0
+parameters:
+  produce-jekyll-data: true
+  path-resource:
+    - input/maps
+FSHOnly: false
+pages:
+  index.md:
+    title: Index
+  casos-de-uso.md:
+    title: Casos de Uso
+  arquitetura.md:
+    title: Arquitetura
+  conformidade.md:
+    title: Conformidade
+  seguranca.md:
+    title: Segurança
+  versionamento.md:
+    title: Versionamento
+menu:
+  Home: index.html
+  "Casos de Uso": casos-de-uso.html
+  Arquitetura: arquitetura.html
+  Conformidade: conformidade.html
+  "Segurança": seguranca.html
+  Artifacts: artifacts.html
+instanceOptions:
+  manualSliceOrdering: true
+resources: {}

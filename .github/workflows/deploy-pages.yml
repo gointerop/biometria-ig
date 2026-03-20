@@ -3,7 +3,7 @@ name: Deploy FHIR IG to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - '**' # Trigger on all branches for testing
 
 jobs:
   build-and-deploy:
@@ -38,7 +38,7 @@ jobs:
           sudo curl -L -o /opt/plantuml/plantuml.jar https://github.com/plantuml/plantuml/releases/latest/download/plantuml.jar
           gem install jekyll
           npm install -g npm@10.8.1
-          npm install -g fsh-sushi
+          npm install -g fsh-sushi@3.17.0
 
       - name: Download IG Publisher
         run: |

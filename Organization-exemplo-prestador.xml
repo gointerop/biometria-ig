@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="exemplo-prestador"/>
+  <meta>
+    <profile value="https://biometria.gointerop.com/fhir/StructureDefinition/PrestadorSaude"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narrativa gerada: Organization exemplo-prestador</b></p><a name="exemplo-prestador"> </a><a name="hcexemplo-prestador"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Perfil: <a href="StructureDefinition-PrestadorSaude.html">Prestador de Saúde</a></p></div><p><b>identifier</b>: <code>https://saude.gov.br/fhir/sid/cnes</code>/9876543, <code>https://receita.gov.br/fhir/sid/cnpj</code>/98.765.432/0001-11</p><p><b>active</b>: true</p><p><b>name</b>: Clínica Prestadora Exemplo LTDA</p><p><b>address</b>: Avenida da Saúde, 500 São Paulo SP 01310-100 BR </p></div>
+  </text>
+  <identifier>
+    <system value="https://saude.gov.br/fhir/sid/cnes"/>
+    <value value="9876543"/>
+  </identifier>
+  <identifier>
+    <system value="https://receita.gov.br/fhir/sid/cnpj"/>
+    <value value="98.765.432/0001-11"/>
+  </identifier>
+  <active value="true"/>
+  <name value="Clínica Prestadora Exemplo LTDA"/>
+  <address>
+    <line value="Avenida da Saúde, 500"/>
+    <city value="São Paulo"/>
+    <state value="SP"/>
+    <postalCode value="01310-100"/>
+    <country value="BR"/>
+  </address>
+</Organization>

@@ -1,0 +1,5 @@
+URL,Version,Status,OIDs,Name,Title,Description,Used
+https://biometria.gointerop.com/fhir/CodeSystem/canal-autenticacao,0.1.0,active,,CanalAutenticacao,Canal de Autenticação Biométrica,"Define o canal pelo qual a autenticação biométrica facial do beneficiário foi realizada.",
+https://biometria.gointerop.com/fhir/CodeSystem/liveness-resultado-cs,0.1.0,active,,LivenessResultadoCS,Resultado da Prova de Vida,"Códigos para resultado da verificação de prova de vida passiva (liveness detection).",
+https://biometria.gointerop.com/fhir/CodeSystem/status-biometrico-cs,0.1.0,active,,StatusBiometricoCS,Status de Cadastro Biométrico,"Códigos de status para o cadastro de biometria facial do beneficiário.",
+https://biometria.gointerop.com/fhir/CodeSystem/tipo-evento-biometrico,0.1.0,active,,TipoEventoBiometrico,Tipo de Evento Biométrico,"Classifica o tipo de evento relacionado à biometria facial de beneficiários de planos de saúde, conforme norma orientativa ANS v5.",

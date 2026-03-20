@@ -1,0 +1,115 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://biometria.gointerop.com/fhir/AuditEvent/exemplo-autenticacao-presenca> a fhir:AuditEvent ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "exemplo-autenticacao-presenca"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://biometria.gointerop.com/fhir/StructureDefinition/AutenticacaoBiometricaFacial"^^xsd:anyURI ;
+       fhir:l <https://biometria.gointerop.com/fhir/StructureDefinition/AutenticacaoBiometricaFacial>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: AuditEvent exemplo-autenticacao-presenca</b></p><a name=\"exemplo-autenticacao-presenca\"> </a><a name=\"hcexemplo-autenticacao-presenca\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Perfil: <a href=\"StructureDefinition-AutenticacaoBiometricaFacial.html\">Autenticação Biométrica Facial</a></p></div><p><b>Canal de Autenticação Biométrica</b>: sistema-operadora</p><blockquote><p><b>Prova de Vida (Liveness Detection)</b></p><ul><li>executado: true</li><li>resultado: aprovado</li></ul></blockquote><p><b>type</b>: DICOM: 110114 (User Authentication)</p><p><b>subtype</b>: <a href=\"CodeSystem-tipo-evento-biometrico.html#tipo-evento-biometrico-autenticacao-presenca\">Tipo de Evento Biométrico: autenticacao-presenca</a> (Autenticação de Presença)</p><p><b>action</b>: Execute</p><p><b>recorded</b>: 2026-03-20 14:30:00-0300</p><p><b>outcome</b>: Success</p><p><b>outcomeDesc</b>: Beneficiário identificado com sucesso. Presença registrada no atendimento.</p><blockquote><p><b>agent</b></p><p><b>type</b>: <span title=\"Códigos:{http://terminology.hl7.org/CodeSystem/v3-ParticipationType PAT}\">PAT</span></p><p><b>who</b>: <a href=\"Patient-exemplo-beneficiario.html\">Maria da Silva(official) Female, DoB: 1990-04-15 ( https://saude.gov.br/fhir/sid/cns#898001160152321 (use: official, ))</a></p><p><b>requestor</b>: false</p></blockquote><blockquote><p><b>agent</b></p><p><b>type</b>: <span title=\"Códigos:{http://terminology.hl7.org/CodeSystem/v3-ParticipationType CST}\">custodian</span></p><p><b>who</b>: <a href=\"Organization-exemplo-operadora.html\">Organization Operadora Saúde Exemplo S.A.</a></p><p><b>requestor</b>: true</p></blockquote><h3>Sources</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Observer</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Organization-exemplo-operadora.html\">Organization Operadora Saúde Exemplo S.A.</a></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "https://biometria.gointerop.com/fhir/StructureDefinition/ext-canal-autenticacao"^^xsd:anyURI ;
+       fhir:l <https://biometria.gointerop.com/fhir/StructureDefinition/ext-canal-autenticacao>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "sistema-operadora"
+     ]
+  ] [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "executado"^^xsd:anyURI ;
+         fhir:l fhir:executado
+       ] ;
+       fhir:value [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:url [
+         fhir:v "resultado"^^xsd:anyURI ;
+         fhir:l fhir:resultado
+       ] ;
+       fhir:value [
+         a fhir:Code ;
+         fhir:v "aprovado"
+       ]
+     ] ) ;
+     fhir:url [
+       fhir:v "https://biometria.gointerop.com/fhir/StructureDefinition/ext-liveness-detection"^^xsd:anyURI ;
+       fhir:l <https://biometria.gointerop.com/fhir/StructureDefinition/ext-liveness-detection>
+     ]
+  ] ) ; # 
+  fhir:type [
+     fhir:system [
+       fhir:v "http://dicom.nema.org/resources/ontology/DCM"^^xsd:anyURI ;
+       fhir:l <http://dicom.nema.org/resources/ontology/DCM>
+     ] ;
+     fhir:code [ fhir:v "110114" ] ;
+     fhir:display [ fhir:v "User Authentication" ]
+  ] ; # 
+  fhir:subtype ( [
+     fhir:system [
+       fhir:v "https://biometria.gointerop.com/fhir/CodeSystem/tipo-evento-biometrico"^^xsd:anyURI ;
+       fhir:l <https://biometria.gointerop.com/fhir/CodeSystem/tipo-evento-biometrico>
+     ] ;
+     fhir:code [ fhir:v "autenticacao-presenca" ] ;
+     fhir:display [ fhir:v "Autenticação de Presença" ]
+  ] ) ; # 
+  fhir:action [ fhir:v "E"] ; # 
+  fhir:recorded [ fhir:v "2026-03-20T14:30:00-03:00"^^xsd:dateTime] ; # 
+  fhir:outcome [ fhir:v "0"] ; # 
+  fhir:outcomeDesc [ fhir:v "Beneficiário identificado com sucesso. Presença registrada no atendimento."] ; # 
+  fhir:agent ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v3-ParticipationType>
+         ] ;
+         fhir:code [ fhir:v "PAT" ]
+       ] )
+     ] ;
+     fhir:who [
+       fhir:l <https://biometria.gointerop.com/fhir/Patient/exemplo-beneficiario> ;
+       fhir:reference [ fhir:v "Patient/exemplo-beneficiario" ]
+     ] ;
+     fhir:requestor [ fhir:v false ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v3-ParticipationType>
+         ] ;
+         fhir:code [ fhir:v "CST" ]
+       ] )
+     ] ;
+     fhir:who [
+       fhir:l <https://biometria.gointerop.com/fhir/Organization/exemplo-operadora> ;
+       fhir:reference [ fhir:v "Organization/exemplo-operadora" ]
+     ] ;
+     fhir:requestor [ fhir:v true ]
+  ] ) ; # 
+  fhir:source [
+     fhir:observer [
+       fhir:l <https://biometria.gointerop.com/fhir/Organization/exemplo-operadora> ;
+       fhir:reference [ fhir:v "Organization/exemplo-operadora" ]
+     ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

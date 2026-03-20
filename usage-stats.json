@@ -1,0 +1,179 @@
+{
+  "package": "com.gointerop.biometria.fhir",
+  "version": "0.1.0",
+  "fhirVersion": "4.0.1",
+  "jurisdiction": "BR",
+  "extensions": [
+    {
+      "url": "https://biometria.gointerop.com/fhir/StructureDefinition/ext-canal-autenticacao",
+      "title": "Canal de Autenticação Biométrica",
+      "types": [
+        "code"
+      ]
+    },
+    {
+      "url": "https://biometria.gointerop.com/fhir/StructureDefinition/ext-liveness-detection",
+      "title": "Prova de Vida (Liveness Detection)",
+      "types": [
+        "boolean",
+        "code",
+        "base64Binary",
+        "boolean",
+        "canonical",
+        "code",
+        "date",
+        "dateTime",
+        "decimal",
+        "id",
+        "instant",
+        "integer",
+        "markdown",
+        "oid",
+        "positiveInt",
+        "string",
+        "time",
+        "unsignedInt",
+        "uri",
+        "url",
+        "uuid",
+        "Address",
+        "Age",
+        "Annotation",
+        "Attachment",
+        "CodeableConcept",
+        "Coding",
+        "ContactPoint",
+        "Count",
+        "Distance",
+        "Duration",
+        "HumanName",
+        "Identifier",
+        "Money",
+        "Period",
+        "Quantity",
+        "Range",
+        "Ratio",
+        "Reference",
+        "SampledData",
+        "Signature",
+        "Timing",
+        "ContactDetail",
+        "Contributor",
+        "DataRequirement",
+        "Expression",
+        "ParameterDefinition",
+        "RelatedArtifact",
+        "TriggerDefinition",
+        "UsageContext",
+        "Dosage",
+        "Meta"
+      ]
+    },
+    {
+      "url": "https://biometria.gointerop.com/fhir/StructureDefinition/ext-status-biometrico",
+      "title": "Status de Cadastro Biométrico",
+      "types": [
+        "code"
+      ]
+    }
+  ],
+  "profiles": {
+    "Encounter": [
+      {
+        "url": "https://biometria.gointerop.com/fhir/StructureDefinition/AtendimentoBiometria",
+        "title": "Atendimento com Autenticação Biométrica"
+      }
+    ],
+    "AuditEvent": [
+      {
+        "url": "https://biometria.gointerop.com/fhir/StructureDefinition/AutenticacaoBiometricaFacial",
+        "title": "Autenticação Biométrica Facial"
+      }
+    ],
+    "Patient": [
+      {
+        "url": "https://biometria.gointerop.com/fhir/StructureDefinition/MyPatient",
+        "title": "MyPatient"
+      }
+    ],
+    "Media": [
+      {
+        "url": "https://biometria.gointerop.com/fhir/StructureDefinition/CapturaBiometricaFacial",
+        "title": "Captura Biométrica Facial"
+      }
+    ],
+    "Consent": [
+      {
+        "url": "https://biometria.gointerop.com/fhir/StructureDefinition/ConsentimentoBiometria",
+        "title": "Consentimento para Biometria Facial"
+      }
+    ],
+    "Organization": [
+      {
+        "url": "https://biometria.gointerop.com/fhir/StructureDefinition/OperadoraSaude",
+        "title": "Operadora de Saúde"
+      },
+      {
+        "url": "https://biometria.gointerop.com/fhir/StructureDefinition/PrestadorSaude",
+        "title": "Prestador de Saúde"
+      }
+    ]
+  },
+  "usage": {
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.url": [
+      "NamingSystem"
+    ],
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.version": [
+      "NamingSystem"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name": [
+      "ImplementationGuide.definition.page",
+      "ImplementationGuide.definition.page.page"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment": [
+      "ImplementationGuide.dependsOn"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version": [
+      "StructureDefinition.snapshot"
+    ],
+    "https://biometria.gointerop.com/fhir/StructureDefinition/ext-canal-autenticacao": [
+      "AuditEvent"
+    ],
+    "https://biometria.gointerop.com/fhir/StructureDefinition/ext-liveness-detection": [
+      "AuditEvent"
+    ],
+    "https://biometria.gointerop.com/fhir/StructureDefinition/ext-status-biometrico": [
+      "Patient"
+    ]
+  }
+}

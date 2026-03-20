@@ -1,0 +1,40 @@
+{
+  "resourceType" : "Media",
+  "id" : "exemplo-captura-biometrica",
+  "meta" : {
+    "profile" : ["https://biometria.gointerop.com/fhir/StructureDefinition/CapturaBiometricaFacial"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: Media exemplo-captura-biometrica</b></p><a name=\"exemplo-captura-biometrica\"> </a><a name=\"hcexemplo-captura-biometrica\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Perfil: <a href=\"StructureDefinition-CapturaBiometricaFacial.html\">Captura Biométrica Facial</a></p></div><p><b>status</b>: Completed</p><p><b>type</b>: <span title=\"Códigos:{http://terminology.hl7.org/CodeSystem/media-type photo}\">photo</span></p><p><b>modality</b>: <span title=\"Códigos:{http://snomed.info/sct 397181003}\">Facial biometrics</span></p><p><b>subject</b>: <a href=\"Patient-exemplo-beneficiario.html\">Maria da Silva(official) Female, DoB: 1990-04-15 ( https://saude.gov.br/fhir/sid/cns#898001160152321\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>created</b>: 2026-03-20 10:00:00-0300</p><p><b>operator</b>: <a href=\"Organization-exemplo-operadora.html\">Organization Operadora Saúde Exemplo S.A.</a></p><h3>Contents</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>ContentType</b></td><td><b>Title</b></td><td><b>Creation</b></td></tr><tr><td style=\"display: none\">*</td><td>image/jpeg</td><td>Captura facial inicial - Maria da Silva</td><td>2026-03-20 10:00:00-0300</td></tr></table><p><b>note</b>: </p><blockquote><div><p>Biometria capturada com sucesso. Qualidade da imagem validada. Template criptografado e armazenado no banco de dados da operadora.</p>\n</div></blockquote></div>"
+  },
+  "status" : "completed",
+  "type" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/media-type",
+      "code" : "photo"
+    }]
+  },
+  "modality" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "397181003",
+      "display" : "Facial biometrics"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/exemplo-beneficiario"
+  },
+  "createdDateTime" : "2026-03-20T10:00:00-03:00",
+  "operator" : {
+    "reference" : "Organization/exemplo-operadora"
+  },
+  "content" : {
+    "contentType" : "image/jpeg",
+    "title" : "Captura facial inicial - Maria da Silva",
+    "creation" : "2026-03-20T10:00:00-03:00"
+  },
+  "note" : [{
+    "text" : "Biometria capturada com sucesso. Qualidade da imagem validada. Template criptografado e armazenado no banco de dados da operadora."
+  }]
+}

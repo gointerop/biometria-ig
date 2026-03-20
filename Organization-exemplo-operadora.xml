@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="exemplo-operadora"/>
+  <meta>
+    <profile value="https://biometria.gointerop.com/fhir/StructureDefinition/OperadoraSaude"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narrativa gerada: Organization exemplo-operadora</b></p><a name="exemplo-operadora"> </a><a name="hcexemplo-operadora"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Perfil: <a href="StructureDefinition-OperadoraSaude.html">Operadora de Saúde</a></p></div><p><b>identifier</b>: <code>https://saude.gov.br/fhir/sid/ans-registro-operadora</code>/123456, <code>https://receita.gov.br/fhir/sid/cnpj</code>/12.345.678/0001-99</p><p><b>active</b>: true</p><p><b>type</b>: <span title="Códigos:{http://terminology.hl7.org/CodeSystem/organization-type ins}">Insurance Company</span></p><p><b>name</b>: Operadora Saúde Exemplo S.A.</p></div>
+  </text>
+  <identifier>
+    <system value="https://saude.gov.br/fhir/sid/ans-registro-operadora"/>
+    <value value="123456"/>
+  </identifier>
+  <identifier>
+    <system value="https://receita.gov.br/fhir/sid/cnpj"/>
+    <value value="12.345.678/0001-99"/>
+  </identifier>
+  <active value="true"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/organization-type"/>
+      <code value="ins"/>
+      <display value="Insurance Company"/>
+    </coding>
+  </type>
+  <name value="Operadora Saúde Exemplo S.A."/>
+</Organization>

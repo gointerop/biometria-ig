@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="liveness-resultado-cs"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narrativa gerada: CodeSystem liveness-resultado-cs</b></p><a name="liveness-resultado-cs"> </a><a name="hcliveness-resultado-cs"> </a><p>Este case-sensitive sistema de código <code>https://biometria.gointerop.com/fhir/CodeSystem/liveness-resultado-cs</code> define o seguinte códigos:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Código</b></td><td><b>Ecrã</b></td><td><b>Definição</b></td></tr><tr><td style="white-space:nowrap">aprovado<a name="liveness-resultado-cs-aprovado"> </a></td><td>Aprovado</td><td>A prova de vida foi executada com sucesso — o beneficiário é uma pessoa real presente no momento da captura.</td></tr><tr><td style="white-space:nowrap">reprovado<a name="liveness-resultado-cs-reprovado"> </a></td><td>Reprovado</td><td>A prova de vida falhou — possível uso de foto ou máscara.</td></tr><tr><td style="white-space:nowrap">nao-executado<a name="liveness-resultado-cs-nao-executado"> </a></td><td>Não Executado</td><td>A prova de vida não foi executada nesta autenticação (opcional conforme norma).</td></tr></table></div>
+  </text>
+  <url value="https://biometria.gointerop.com/fhir/CodeSystem/liveness-resultado-cs"/>
+  <version value="0.1.0"/>
+  <name value="LivenessResultadoCS"/>
+  <title value="Resultado da Prova de Vida"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-03-20T20:23:12+00:00"/>
+  <publisher value="GOInterop Tecnologia LTDA"/>
+  <contact>
+    <name value="GOInterop Tecnologia LTDA"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://gointerop.com"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="contato@gointerop.com"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Italo Macedo"/>
+    <telecom>
+      <system value="email"/>
+      <value value="italo@gointerop.com"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Claudio Junior"/>
+    <telecom>
+      <system value="email"/>
+      <value value="claudio@gointerop.com"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Fernando Araujo"/>
+    <telecom>
+      <system value="email"/>
+      <value value="fernando@gointerop.com"/>
+    </telecom>
+  </contact>
+  <description value="Códigos para resultado da verificação de prova de vida passiva (liveness detection)."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="BR"/>
+      <display value="Brazil"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="3"/>
+  <concept>
+    <code value="aprovado"/>
+    <display value="Aprovado"/>
+    <definition value="A prova de vida foi executada com sucesso — o beneficiário é uma pessoa real presente no momento da captura."/>
+  </concept>
+  <concept>
+    <code value="reprovado"/>
+    <display value="Reprovado"/>
+    <definition value="A prova de vida falhou — possível uso de foto ou máscara."/>
+  </concept>
+  <concept>
+    <code value="nao-executado"/>
+    <display value="Não Executado"/>
+    <definition value="A prova de vida não foi executada nesta autenticação (opcional conforme norma)."/>
+  </concept>
+</CodeSystem>

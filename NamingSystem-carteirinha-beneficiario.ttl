@@ -1,0 +1,89 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://biometria.gointerop.com/fhir/NamingSystem/carteirinha-beneficiario> a fhir:NamingSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "carteirinha-beneficiario"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: NamingSystem carteirinha-beneficiario</b></p><a name=\"carteirinha-beneficiario\"> </a><a name=\"hccarteirinha-beneficiario\"> </a><h3>Resumo</h3><table class=\"grid\"><tr><td>Definição de URL</td><td>https://biometria.gointerop.com/fhir/NamingSystem/carteirinha-beneficiario</td></tr><tr><td>Versão</td><td>0.1.0</td></tr><tr><td>Nome</td><td>CarteirinhaBeneficiario</td></tr><tr><td>Estado</td><td>active</td></tr><tr><td>Definição</td><td><div><p>Identificador da carteirinha (cartão de identificação) do beneficiário emitida pela operadora de plano de saúde.</p>\n</div></td></tr><tr><td>Editor</td><td>GOInterop Tecnologia LTDA</td></tr></table><h3>Identificadores</h3><table class=\"grid\"><tr><td><b>Tipo</b></td><td><b>Valor</b></td><td><b>Preferenciais</b></td><td><b>Comentário</b></td></tr><tr><td>URI</td><td>https://biometria.gointerop.com/fhir/sid/carteirinha-beneficiario</td><td>true</td><td>URI canônica para o identificador de carteirinha de beneficiário de plano de saúde.</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.url"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.url>
+     ] ;
+     fhir:value [
+       a fhir:Uri ;
+       fhir:v "https://biometria.gointerop.com/fhir/NamingSystem/carteirinha-beneficiario"^^xsd:anyURI ;
+       fhir:l <https://biometria.gointerop.com/fhir/NamingSystem/carteirinha-beneficiario>
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.version"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.version>
+     ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "0.1.0"
+     ]
+  ] ) ; # 
+  fhir:name [ fhir:v "CarteirinhaBeneficiario"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:kind [ fhir:v "identifier"] ; # 
+  fhir:date [ fhir:v "2026-03-20"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "GOInterop Tecnologia LTDA"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "GOInterop Tecnologia LTDA" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://gointerop.com" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "contato@gointerop.com" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Italo Macedo" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "italo@gointerop.com" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Claudio Junior" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "claudio@gointerop.com" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Fernando Araujo" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fernando@gointerop.com" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Identificador da carteirinha (cartão de identificação) do beneficiário emitida pela operadora de plano de saúde."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ;
+         fhir:l <urn:iso:std:iso:3166>
+       ] ;
+       fhir:code [ fhir:v "BR" ] ;
+       fhir:display [ fhir:v "Brazil" ]
+     ] )
+  ] ) ; # 
+  fhir:uniqueId ( [
+     fhir:type [ fhir:v "uri" ] ;
+     fhir:value [ fhir:v "https://biometria.gointerop.com/fhir/sid/carteirinha-beneficiario" ] ;
+     fhir:preferred [ fhir:v true ] ;
+     fhir:comment [ fhir:v "URI canônica para o identificador de carteirinha de beneficiário de plano de saúde." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

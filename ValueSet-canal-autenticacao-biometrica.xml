@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="canal-autenticacao-biometrica"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narrativa gerada: ValueSet canal-autenticacao-biometrica</b></p><a name="canal-autenticacao-biometrica"> </a><a name="hccanal-autenticacao-biometrica"> </a><ul><li>Include estes códigos, tal como definidos em <a href="http://terminology.hl7.org/7.1.0/CodeSystem-v3-RoleCode.html"><code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code></a><span title="Version is explicitly stated to be 4.0.0"> versão &#x1F4CD;4.0.0</span><table class="none"><tr><td style="white-space:nowrap"><b>Código</b></td><td><b>Ecrã</b></td><td><b>Definição</b></td></tr><tr><td><a href="http://terminology.hl7.org/7.1.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-HOSP">HOSP</a></td><td>Sistema da Operadora (presencial)</td><td>An acute care institution that provides medical, surgical, or psychiatric care and treatment for the sick or the injured.</td></tr><tr><td><a href="http://terminology.hl7.org/7.1.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-PHARM">PHARM</a></td><td>Sistema do Prestador (presencial)</td><td>Location where healthcare service was delivered, identified as a pharmacy.</td></tr><tr><td><a href="http://terminology.hl7.org/7.1.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-OUTPHARM">OUTPHARM</a></td><td>Aplicativo da Operadora (teleatendimento)</td><td>**Description:** A location that plays the role of delivering services which may include providing judicious, safe, efficacious, appropriate and cost effective use of medicines for treatment of patients for outpatient visits and may also be used for discharge prescriptions.</td></tr></table></li></ul></div>
+  </text>
+  <url value="https://biometria.gointerop.com/fhir/ValueSet/canal-autenticacao-biometrica"/>
+  <version value="0.1.0"/>
+  <name value="CanalAutenticacaoBiometrica"/>
+  <title value="Canal de Autenticação Biométrica"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-03-20T20:23:12+00:00"/>
+  <publisher value="GOInterop Tecnologia LTDA"/>
+  <contact>
+    <name value="GOInterop Tecnologia LTDA"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://gointerop.com"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="contato@gointerop.com"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Italo Macedo"/>
+    <telecom>
+      <system value="email"/>
+      <value value="italo@gointerop.com"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Claudio Junior"/>
+    <telecom>
+      <system value="email"/>
+      <value value="claudio@gointerop.com"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Fernando Araujo"/>
+    <telecom>
+      <system value="email"/>
+      <value value="fernando@gointerop.com"/>
+    </telecom>
+  </contact>
+  <description value="Canal utilizado para autenticação biométrica do beneficiário."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="BR"/>
+      <display value="Brazil"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+      <version value="4.0.0"/>
+      <concept>
+        <code value="HOSP"/>
+        <display value="Sistema da Operadora (presencial)"/>
+      </concept>
+      <concept>
+        <code value="PHARM"/>
+        <display value="Sistema do Prestador (presencial)"/>
+      </concept>
+      <concept>
+        <code value="OUTPHARM"/>
+        <display value="Aplicativo da Operadora (teleatendimento)"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

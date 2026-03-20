@@ -1,0 +1,7 @@
+URL,Version,Status,OIDs,Name,Title,Description,Uses,Used,Sources
+https://biometria.gointerop.com/fhir/ValueSet/canal-autenticacao-biometrica,0.1.0,active,,CanalAutenticacaoBiometrica,Canal de Autenticação Biométrica,"Canal utilizado para autenticação biométrica do beneficiário.",,"THO (V3)"
+https://biometria.gointerop.com/fhir/ValueSet/canal-autenticacao-vs,0.1.0,active,,CanalAutenticacaoVS,Canal de Autenticação Biométrica,"Canal utilizado na autenticação biométrica facial do beneficiário.","StructureDefinition/ext-canal-autenticacao","Internal"
+https://biometria.gointerop.com/fhir/ValueSet/liveness-resultado-vs,0.1.0,active,,LivenessResultadoVS,Resultado da Prova de Vida,"Resultado da verificação de prova de vida (liveness detection) passiva.","StructureDefinition/ext-liveness-detection","Internal"
+https://biometria.gointerop.com/fhir/ValueSet/resultado-biometrico,0.1.0,active,,ResultadoBiometrico,Resultado da Verificação Biométrica,"Resultado da verificação biométrica facial de um beneficiário.",,"Internal"
+https://biometria.gointerop.com/fhir/ValueSet/resultado-verificacao-biometrica,0.1.0,active,,ResultadoVerificacaoBiometrica,Resultado da Verificação Biométrica Facial,"Indica o resultado da comparação biométrica entre a foto capturada e o template armazenado.",,"THO (V3)"
+https://biometria.gointerop.com/fhir/ValueSet/status-biometrico-vs,0.1.0,active,,StatusBiometricoVS,Status de Cadastro Biométrico,"Valores possíveis para o status do cadastro biométrico facial do beneficiário.","StructureDefinition/ext-status-biometrico","Internal"

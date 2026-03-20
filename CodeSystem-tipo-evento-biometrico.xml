@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="tipo-evento-biometrico"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narrativa gerada: CodeSystem tipo-evento-biometrico</b></p><a name="tipo-evento-biometrico"> </a><a name="hctipo-evento-biometrico"> </a><p>Este case-sensitive sistema de código <code>https://biometria.gointerop.com/fhir/CodeSystem/tipo-evento-biometrico</code> define o seguinte códigos:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Código</b></td><td><b>Ecrã</b></td><td><b>Definição</b></td></tr><tr><td style="white-space:nowrap">captura-inicial<a name="tipo-evento-biometrico-captura-inicial"> </a></td><td>Captura Inicial</td><td>Captura inicial da biometria facial do beneficiário para cadastro no sistema da operadora ou prestador.</td></tr><tr><td style="white-space:nowrap">autenticacao-presenca<a name="tipo-evento-biometrico-autenticacao-presenca"> </a></td><td>Autenticação de Presença</td><td>Autenticação da presença do beneficiário via biometria facial no sistema da operadora para registro de atendimento.</td></tr><tr><td style="white-space:nowrap">autenticacao-atendimento<a name="tipo-evento-biometrico-autenticacao-atendimento"> </a></td><td>Autenticação de Atendimento</td><td>Autenticação do beneficiário via biometria facial no início do atendimento pelo prestador.</td></tr><tr><td style="white-space:nowrap">autenticacao-teleatendimento<a name="tipo-evento-biometrico-autenticacao-teleatendimento"> </a></td><td>Autenticação de Teleatendimento</td><td>Autenticação do beneficiário via biometria facial no aplicativo da operadora para teleatendimento.</td></tr></table></div>
+  </text>
+  <url value="https://biometria.gointerop.com/fhir/CodeSystem/tipo-evento-biometrico"/>
+  <version value="0.1.0"/>
+  <name value="TipoEventoBiometrico"/>
+  <title value="Tipo de Evento Biométrico"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-03-20T20:23:12+00:00"/>
+  <publisher value="GOInterop Tecnologia LTDA"/>
+  <contact>
+    <name value="GOInterop Tecnologia LTDA"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://gointerop.com"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="contato@gointerop.com"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Italo Macedo"/>
+    <telecom>
+      <system value="email"/>
+      <value value="italo@gointerop.com"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Claudio Junior"/>
+    <telecom>
+      <system value="email"/>
+      <value value="claudio@gointerop.com"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Fernando Araujo"/>
+    <telecom>
+      <system value="email"/>
+      <value value="fernando@gointerop.com"/>
+    </telecom>
+  </contact>
+  <description value="Classifica o tipo de evento relacionado à biometria facial de beneficiários de planos de saúde, conforme norma orientativa ANS v5."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="BR"/>
+      <display value="Brazil"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="4"/>
+  <concept>
+    <code value="captura-inicial"/>
+    <display value="Captura Inicial"/>
+    <definition value="Captura inicial da biometria facial do beneficiário para cadastro no sistema da operadora ou prestador."/>
+  </concept>
+  <concept>
+    <code value="autenticacao-presenca"/>
+    <display value="Autenticação de Presença"/>
+    <definition value="Autenticação da presença do beneficiário via biometria facial no sistema da operadora para registro de atendimento."/>
+  </concept>
+  <concept>
+    <code value="autenticacao-atendimento"/>
+    <display value="Autenticação de Atendimento"/>
+    <definition value="Autenticação do beneficiário via biometria facial no início do atendimento pelo prestador."/>
+  </concept>
+  <concept>
+    <code value="autenticacao-teleatendimento"/>
+    <display value="Autenticação de Teleatendimento"/>
+    <definition value="Autenticação do beneficiário via biometria facial no aplicativo da operadora para teleatendimento."/>
+  </concept>
+</CodeSystem>

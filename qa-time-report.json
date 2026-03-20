@@ -1,0 +1,1509 @@
+{
+  "date" : "Fri, 20 Mar, 2026 20:23:12 +0000",
+  "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
+  "files" : [{
+    "name" : "/fsh-generated/resources/ImplementationGuide-com.gointerop.biometria.fhir.json",
+    "size" : 13610,
+    "processes" : [{
+      "activity" : "load",
+      "start" : 53,
+      "length" : 12
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 54,
+      "length" : 16
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 54,
+      "length" : 188
+    },
+    {
+      "activity" : "validate",
+      "start" : 61,
+      "length" : 2948
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 64,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 66,
+      "length" : 107
+    },
+    {
+      "activity" : "generate2",
+      "start" : 72,
+      "length" : 182
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 88,
+      "length" : 12
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 97,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/AuditEvent-exemplo-autenticacao-atendimento.json",
+    "size" : 1924,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 53,
+      "length" : 4
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 54,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 54,
+      "length" : 499
+    },
+    {
+      "activity" : "validate",
+      "start" : 64,
+      "length" : 82
+    },
+    {
+      "activity" : "generate1",
+      "start" : 67,
+      "length" : 14
+    },
+    {
+      "activity" : "generate2",
+      "start" : 72,
+      "length" : 24
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/AuditEvent-exemplo-autenticacao-presenca.json",
+    "size" : 1923,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 53,
+      "length" : 2
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 54,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 55,
+      "length" : 6
+    },
+    {
+      "activity" : "validate",
+      "start" : 64,
+      "length" : 34
+    },
+    {
+      "activity" : "generate1",
+      "start" : 67,
+      "length" : 12
+    },
+    {
+      "activity" : "generate2",
+      "start" : 72,
+      "length" : 15
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/AuditEvent-exemplo-autenticacao-teleatendimento.json",
+    "size" : 1945,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 53,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 55,
+      "length" : 5
+    },
+    {
+      "activity" : "validate",
+      "start" : 64,
+      "length" : 31
+    },
+    {
+      "activity" : "generate1",
+      "start" : 67,
+      "length" : 12
+    },
+    {
+      "activity" : "generate2",
+      "start" : 72,
+      "length" : 14
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/CodeSystem-canal-autenticacao.json",
+    "size" : 1248,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 53,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 53,
+      "length" : 3
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 54,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 55,
+      "length" : 5
+    },
+    {
+      "activity" : "validate",
+      "start" : 57,
+      "length" : 19
+    },
+    {
+      "activity" : "generate1",
+      "start" : 67,
+      "length" : 11
+    },
+    {
+      "activity" : "generate2",
+      "start" : 72,
+      "length" : 76
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 88,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/CodeSystem-liveness-resultado-cs.json",
+    "size" : 1184,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 53,
+      "length" : 2
+    },
+    {
+      "activity" : "load",
+      "start" : 53,
+      "length" : 3
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 54,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 55,
+      "length" : 2
+    },
+    {
+      "activity" : "validate",
+      "start" : 57,
+      "length" : 13
+    },
+    {
+      "activity" : "generate1",
+      "start" : 67,
+      "length" : 10
+    },
+    {
+      "activity" : "generate2",
+      "start" : 72,
+      "length" : 68
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/CodeSystem-status-biometrico-cs.json",
+    "size" : 1127,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 53,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 53,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 55,
+      "length" : 2
+    },
+    {
+      "activity" : "validate",
+      "start" : 57,
+      "length" : 13
+    },
+    {
+      "activity" : "generate1",
+      "start" : 67,
+      "length" : 10
+    },
+    {
+      "activity" : "generate2",
+      "start" : 73,
+      "length" : 64
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 88,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/CodeSystem-tipo-evento-biometrico.json",
+    "size" : 1602,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 53,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 53,
+      "length" : 3
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 54,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 55,
+      "length" : 2
+    },
+    {
+      "activity" : "validate",
+      "start" : 57,
+      "length" : 17
+    },
+    {
+      "activity" : "generate1",
+      "start" : 67,
+      "length" : 12
+    },
+    {
+      "activity" : "generate2",
+      "start" : 73,
+      "length" : 65
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Consent-exemplo-consentimento-biometria.json",
+    "size" : 1586,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 53,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 55,
+      "length" : 425
+    },
+    {
+      "activity" : "validate",
+      "start" : 64,
+      "length" : 1008
+    },
+    {
+      "activity" : "generate1",
+      "start" : 67,
+      "length" : 22
+    },
+    {
+      "activity" : "generate2",
+      "start" : 73,
+      "length" : 25
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Encounter-exemplo-atendimento.json",
+    "size" : 742,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 53,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 55,
+      "length" : 123
+    },
+    {
+      "activity" : "validate",
+      "start" : 65,
+      "length" : 294
+    },
+    {
+      "activity" : "generate1",
+      "start" : 67,
+      "length" : 8
+    },
+    {
+      "activity" : "generate2",
+      "start" : 73,
+      "length" : 16
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Media-exemplo-captura-biometrica.json",
+    "size" : 1060,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 53,
+      "length" : 2
+    },
+    {
+      "activity" : "scan",
+      "start" : 54,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 55,
+      "length" : 953
+    },
+    {
+      "activity" : "validate",
+      "start" : 65,
+      "length" : 687
+    },
+    {
+      "activity" : "generate1",
+      "start" : 67,
+      "length" : 11
+    },
+    {
+      "activity" : "generate2",
+      "start" : 73,
+      "length" : 11
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/NamingSystem-carteirinha-beneficiario.json",
+    "size" : 1006,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 53,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 53,
+      "length" : 11
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 54,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 56,
+      "length" : 3
+    },
+    {
+      "activity" : "validate",
+      "start" : 56,
+      "length" : 724
+    },
+    {
+      "activity" : "generate1",
+      "start" : 67,
+      "length" : 13
+    },
+    {
+      "activity" : "generate2",
+      "start" : 73,
+      "length" : 12
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/NamingSystem-template-biometrico.json",
+    "size" : 970,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 53,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 53,
+      "length" : 3
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 56,
+      "length" : 2
+    },
+    {
+      "activity" : "validate",
+      "start" : 57,
+      "length" : 15
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 64,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 67,
+      "length" : 10
+    },
+    {
+      "activity" : "generate2",
+      "start" : 73,
+      "length" : 10
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Organization-exemplo-operadora.json",
+    "size" : 703,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 53,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 56,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 66,
+      "length" : 10
+    },
+    {
+      "activity" : "generate1",
+      "start" : 67,
+      "length" : 5
+    },
+    {
+      "activity" : "generate2",
+      "start" : 73,
+      "length" : 7
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Organization-exemplo-prestador.json",
+    "size" : 663,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 53,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 56,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 66,
+      "length" : 7
+    },
+    {
+      "activity" : "generate1",
+      "start" : 67,
+      "length" : 6
+    },
+    {
+      "activity" : "generate2",
+      "start" : 73,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Patient-PatientExample.json",
+    "size" : 267,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 53,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 56,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 66,
+      "length" : 2
+    },
+    {
+      "activity" : "generate1",
+      "start" : 67,
+      "length" : 4
+    },
+    {
+      "activity" : "generate2",
+      "start" : 73,
+      "length" : 8
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Patient-exemplo-beneficiario.json",
+    "size" : 1320,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 53,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 56,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 66,
+      "length" : 17
+    },
+    {
+      "activity" : "generate1",
+      "start" : 67,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 73,
+      "length" : 10
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-AtendimentoBiometria.json",
+    "size" : 2923,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 53,
+      "length" : 3
+    },
+    {
+      "activity" : "load",
+      "start" : 53,
+      "length" : 5
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 53,
+      "length" : 66
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 54,
+      "length" : 1
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 54,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 56,
+      "length" : 38
+    },
+    {
+      "activity" : "validate",
+      "start" : 57,
+      "length" : 471
+    },
+    {
+      "activity" : "checkConformanceResources",
+      "start" : 64,
+      "length" : 1
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 64,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 67,
+      "length" : 324
+    },
+    {
+      "activity" : "generate2",
+      "start" : 73,
+      "length" : 905
+    },
+    {
+      "activity" : "generate2",
+      "start" : 76,
+      "length" : 1364
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 88,
+      "length" : 7
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 97,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-AutenticacaoBiometricaFacial.json",
+    "size" : 5673,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 53,
+      "length" : 4
+    },
+    {
+      "activity" : "load",
+      "start" : 53,
+      "length" : 7
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 54,
+      "length" : 92
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 56,
+      "length" : 57
+    },
+    {
+      "activity" : "validate",
+      "start" : 58,
+      "length" : 425
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 64,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 67,
+      "length" : 386
+    },
+    {
+      "activity" : "generate2",
+      "start" : 74,
+      "length" : 555
+    },
+    {
+      "activity" : "generate2",
+      "start" : 78,
+      "length" : 597
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 88,
+      "length" : 12
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 97,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-BeneficiarioBiometria.json",
+    "size" : 3856,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 53,
+      "length" : 3
+    },
+    {
+      "activity" : "load",
+      "start" : 53,
+      "length" : 4
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 54,
+      "length" : 57
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 56,
+      "length" : 26
+    },
+    {
+      "activity" : "validate",
+      "start" : 58,
+      "length" : 216
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 64,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 67,
+      "length" : 230
+    },
+    {
+      "activity" : "generate2",
+      "start" : 74,
+      "length" : 329
+    },
+    {
+      "activity" : "generate2",
+      "start" : 78,
+      "length" : 356
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 88,
+      "length" : 11
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-CapturaBiometricaFacial.json",
+    "size" : 3408,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 53,
+      "length" : 3
+    },
+    {
+      "activity" : "load",
+      "start" : 53,
+      "length" : 5
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 54,
+      "length" : 31
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 56,
+      "length" : 23
+    },
+    {
+      "activity" : "validate",
+      "start" : 58,
+      "length" : 131
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 64,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 68,
+      "length" : 144
+    },
+    {
+      "activity" : "generate2",
+      "start" : 75,
+      "length" : 209
+    },
+    {
+      "activity" : "generate2",
+      "start" : 79,
+      "length" : 203
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 88,
+      "length" : 7
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 97,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-ConsentimentoBiometria.json",
+    "size" : 3278,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 53,
+      "length" : 2
+    },
+    {
+      "activity" : "load",
+      "start" : 53,
+      "length" : 4
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 54,
+      "length" : 41
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 56,
+      "length" : 22
+    },
+    {
+      "activity" : "validate",
+      "start" : 59,
+      "length" : 168
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 64,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 68,
+      "length" : 212
+    },
+    {
+      "activity" : "generate2",
+      "start" : 75,
+      "length" : 290
+    },
+    {
+      "activity" : "generate2",
+      "start" : 79,
+      "length" : 225
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 88,
+      "length" : 8
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-MyPatient.json",
+    "size" : 616,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 53,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 53,
+      "length" : 2
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 54,
+      "length" : 31
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 56,
+      "length" : 12
+    },
+    {
+      "activity" : "validate",
+      "start" : 59,
+      "length" : 107
+    },
+    {
+      "activity" : "generate1",
+      "start" : 68,
+      "length" : 110
+    },
+    {
+      "activity" : "generate2",
+      "start" : 75,
+      "length" : 188
+    },
+    {
+      "activity" : "generate2",
+      "start" : 79,
+      "length" : 161
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 88,
+      "length" : 7
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-OperadoraSaude.json",
+    "size" : 2453,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 53,
+      "length" : 2
+    },
+    {
+      "activity" : "load",
+      "start" : 53,
+      "length" : 3
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 54,
+      "length" : 32
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 56,
+      "length" : 18
+    },
+    {
+      "activity" : "validate",
+      "start" : 59,
+      "length" : 116
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 64,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 68,
+      "length" : 169
+    },
+    {
+      "activity" : "generate2",
+      "start" : 75,
+      "length" : 215
+    },
+    {
+      "activity" : "generate2",
+      "start" : 79,
+      "length" : 147
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 88,
+      "length" : 12
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 97,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-PrestadorSaude.json",
+    "size" : 2493,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 53,
+      "length" : 3
+    },
+    {
+      "activity" : "load",
+      "start" : 53,
+      "length" : 3
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 54,
+      "length" : 29
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 56,
+      "length" : 16
+    },
+    {
+      "activity" : "validate",
+      "start" : 59,
+      "length" : 116
+    },
+    {
+      "activity" : "generate1",
+      "start" : 68,
+      "length" : 148
+    },
+    {
+      "activity" : "generate2",
+      "start" : 75,
+      "length" : 208
+    },
+    {
+      "activity" : "generate2",
+      "start" : 79,
+      "length" : 140
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 88,
+      "length" : 7
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-ext-canal-autenticacao.json",
+    "size" : 1925,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 53,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 53,
+      "length" : 3
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 54,
+      "length" : 4
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 56,
+      "length" : 6
+    },
+    {
+      "activity" : "validate",
+      "start" : 59,
+      "length" : 1857
+    },
+    {
+      "activity" : "generate1",
+      "start" : 68,
+      "length" : 29
+    },
+    {
+      "activity" : "generate2",
+      "start" : 76,
+      "length" : 95
+    },
+    {
+      "activity" : "generate2",
+      "start" : 79,
+      "length" : 28
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 88,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-ext-liveness-detection.json",
+    "size" : 3425,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 53,
+      "length" : 3
+    },
+    {
+      "activity" : "load",
+      "start" : 53,
+      "length" : 4
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 54,
+      "length" : 10
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 54,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 56,
+      "length" : 11
+    },
+    {
+      "activity" : "validate",
+      "start" : 61,
+      "length" : 72
+    },
+    {
+      "activity" : "generate1",
+      "start" : 68,
+      "length" : 70
+    },
+    {
+      "activity" : "generate2",
+      "start" : 76,
+      "length" : 118
+    },
+    {
+      "activity" : "generate2",
+      "start" : 80,
+      "length" : 49
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 88,
+      "length" : 3
+    },
+    {
+      "activity" : "scanProfilesForR5",
+      "start" : 97,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-ext-status-biometrico.json",
+    "size" : 1746,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 53,
+      "length" : 2
+    },
+    {
+      "activity" : "load",
+      "start" : 53,
+      "length" : 3
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 54,
+      "length" : 5
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 54,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 56,
+      "length" : 6
+    },
+    {
+      "activity" : "validate",
+      "start" : 61,
+      "length" : 23
+    },
+    {
+      "activity" : "generate1",
+      "start" : 69,
+      "length" : 30
+    },
+    {
+      "activity" : "generate2",
+      "start" : 76,
+      "length" : 83
+    },
+    {
+      "activity" : "generate2",
+      "start" : 80,
+      "length" : 32
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 88,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ValueSet-canal-autenticacao-biometrica.json",
+    "size" : 1076,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 53,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 53,
+      "length" : 79
+    },
+    {
+      "activity" : "loadInfo",
+      "start" : 54,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 56,
+      "length" : 43
+    },
+    {
+      "activity" : "validate",
+      "start" : 57,
+      "length" : 29
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 64,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 69,
+      "length" : 8
+    },
+    {
+      "activity" : "generate2",
+      "start" : 76,
+      "length" : 86
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ValueSet-canal-autenticacao-vs.json",
+    "size" : 919,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 53,
+      "length" : 2
+    },
+    {
+      "activity" : "load",
+      "start" : 53,
+      "length" : 3
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 56,
+      "length" : 4
+    },
+    {
+      "activity" : "validate",
+      "start" : 57,
+      "length" : 13
+    },
+    {
+      "activity" : "generate1",
+      "start" : 69,
+      "length" : 8
+    },
+    {
+      "activity" : "generate2",
+      "start" : 76,
+      "length" : 71
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 88,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ValueSet-liveness-resultado-vs.json",
+    "size" : 896,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 53,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 53,
+      "length" : 2
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 54,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 56,
+      "length" : 6
+    },
+    {
+      "activity" : "validate",
+      "start" : 57,
+      "length" : 13
+    },
+    {
+      "activity" : "generate1",
+      "start" : 69,
+      "length" : 7
+    },
+    {
+      "activity" : "generate2",
+      "start" : 76,
+      "length" : 35
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ValueSet-resultado-biometrico.json",
+    "size" : 1006,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 53,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 53,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 56,
+      "length" : 4
+    },
+    {
+      "activity" : "validate",
+      "start" : 57,
+      "length" : 15
+    },
+    {
+      "activity" : "generate1",
+      "start" : 69,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 76,
+      "length" : 34
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ValueSet-resultado-verificacao-biometrica.json",
+    "size" : 1104,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 53,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 53,
+      "length" : 21
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 56,
+      "length" : 7
+    },
+    {
+      "activity" : "validate",
+      "start" : 57,
+      "length" : 14
+    },
+    {
+      "activity" : "generate1",
+      "start" : 69,
+      "length" : 11
+    },
+    {
+      "activity" : "generate2",
+      "start" : 76,
+      "length" : 31
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 88,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ValueSet-status-biometrico-vs.json",
+    "size" : 908,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 53,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 53,
+      "length" : 2
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 54,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 56,
+      "length" : 8
+    },
+    {
+      "activity" : "validate",
+      "start" : 57,
+      "length" : 12
+    },
+    {
+      "activity" : "generate1",
+      "start" : 69,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 76,
+      "length" : 30
+    }]
+  },
+  {
+    "name" : "/fsh-generated/includes/menu.xml",
+    "size" : 1292
+  },
+  {
+    "name" : "/fsh-generated/includes/fsh-link-references.md",
+    "size" : 2190,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 76,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/casos-de-uso.md",
+    "size" : 5605
+  },
+  {
+    "name" : "/input/pagecontent/versionamento.md",
+    "size" : 1220
+  },
+  {
+    "name" : "/input/pagecontent/index.md",
+    "size" : 2372
+  },
+  {
+    "name" : "/input/pagecontent/seguranca.md",
+    "size" : 2395,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 76,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/arquitetura.md",
+    "size" : 2946
+  },
+  {
+    "name" : "/input/pagecontent/conformidade.md",
+    "size" : 2297
+  },
+  {
+    "name" : "/template/config",
+    "size" : 0
+  },
+  {
+    "name" : "/template/config/_config.yml",
+    "size" : 140
+  },
+  {
+    "name" : "/temp/pages/_includes/artifacts.xml",
+    "size" : 16606,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 76,
+      "length" : 1
+    }]
+  }]
+}

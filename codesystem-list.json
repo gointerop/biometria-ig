@@ -1,0 +1,34 @@
+{
+  "codeSystems" : [{
+    "url" : "https://biometria.gointerop.com/fhir/CodeSystem/canal-autenticacao",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "CanalAutenticacao",
+    "title" : "Canal de Autenticação Biométrica",
+    "description" : "Define o canal pelo qual a autenticação biométrica facial do beneficiário foi realizada."
+  },
+  {
+    "url" : "https://biometria.gointerop.com/fhir/CodeSystem/liveness-resultado-cs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "LivenessResultadoCS",
+    "title" : "Resultado da Prova de Vida",
+    "description" : "Códigos para resultado da verificação de prova de vida passiva (liveness detection)."
+  },
+  {
+    "url" : "https://biometria.gointerop.com/fhir/CodeSystem/status-biometrico-cs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "StatusBiometricoCS",
+    "title" : "Status de Cadastro Biométrico",
+    "description" : "Códigos de status para o cadastro de biometria facial do beneficiário."
+  },
+  {
+    "url" : "https://biometria.gointerop.com/fhir/CodeSystem/tipo-evento-biometrico",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "TipoEventoBiometrico",
+    "title" : "Tipo de Evento Biométrico",
+    "description" : "Classifica o tipo de evento relacionado à biometria facial de beneficiários de planos de saúde, conforme norma orientativa ANS v5."
+  }]
+}

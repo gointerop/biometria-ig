@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="exemplo-beneficiario"/>
+  <meta>
+    <profile value="https://biometria.gointerop.com/fhir/StructureDefinition/BeneficiarioBiometria"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narrativa gerada: Patient exemplo-beneficiario</b></p><a name="exemplo-beneficiario"> </a><a name="hcexemplo-beneficiario"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Perfil: <a href="StructureDefinition-BeneficiarioBiometria.html">Beneficiário com Biometria Facial</a></p></div><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Maria da Silva(official) Female, DoB: 1990-04-15 ( https://saude.gov.br/fhir/sid/cns#898001160152321 (use: official, ))</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="O registo está ativo">Ativo:</td><td colspan="3">true</td></tr><tr><td style="background-color: #f3f5da" title="Other Ids (see the one above)">Other Ids:</td><td colspan="3"><ul><li><a href="NamingSystem-carteirinha-beneficiario.html" title="Identificador da carteirinha (cartão de identificação) do beneficiário emitida pela operadora de plano de saúde.">CarteirinhaBeneficiario</a>/0001234567890 (utilização: official, )</li><li><code>https://saude.gov.br/fhir/sid/cpf</code>/12345678901 (utilização: official, )</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Formas de contactar o doente">Detalhes do contacto</td><td colspan="3"><ul><li><a href="tel:+5511987654321">+5511987654321</a></li><li>Rua das Palmeiras, 200 São Paulo SP 04567-000 BR (home)</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Indica o status do cadastro de biometria facial do beneficiário na operadora de saúde."><a href="StructureDefinition-ext-status-biometrico.html">Status de Cadastro Biométrico</a></td><td colspan="3">cadastrado</td></tr></table></div>
+  </text>
+  <extension url="https://biometria.gointerop.com/fhir/StructureDefinition/ext-status-biometrico">
+    <valueCode value="cadastrado"/>
+  </extension>
+  <identifier>
+    <use value="official"/>
+    <system value="https://biometria.gointerop.com/fhir/sid/carteirinha-beneficiario"/>
+    <value value="0001234567890"/>
+  </identifier>
+  <identifier>
+    <use value="official"/>
+    <system value="https://saude.gov.br/fhir/sid/cpf"/>
+    <value value="12345678901"/>
+  </identifier>
+  <identifier>
+    <use value="official"/>
+    <system value="https://saude.gov.br/fhir/sid/cns"/>
+    <value value="898001160152321"/>
+  </identifier>
+  <active value="true"/>
+  <name>
+    <use value="official"/>
+    <text value="Maria da Silva"/>
+    <family value="Silva"/>
+    <given value="Maria"/>
+  </name>
+  <telecom>
+    <system value="phone"/>
+    <value value="+5511987654321"/>
+    <use value="mobile"/>
+  </telecom>
+  <gender value="female"/>
+  <birthDate value="1990-04-15"/>
+  <address>
+    <use value="home"/>
+    <line value="Rua das Palmeiras, 200"/>
+    <city value="São Paulo"/>
+    <state value="SP"/>
+    <postalCode value="04567-000"/>
+    <country value="BR"/>
+  </address>
+</Patient>

@@ -1,0 +1,168 @@
+[{
+  "id" : "canal-autenticacao",
+  "type" : "CodeSystem",
+  "url" : "https://biometria.gointerop.com/fhir/CodeSystem/canal-autenticacao",
+  "version" : "0.1.0",
+  "name" : "CanalAutenticacao"
+},
+{
+  "id" : "liveness-resultado-cs",
+  "type" : "CodeSystem",
+  "url" : "https://biometria.gointerop.com/fhir/CodeSystem/liveness-resultado-cs",
+  "version" : "0.1.0",
+  "name" : "LivenessResultadoCS"
+},
+{
+  "id" : "status-biometrico-cs",
+  "type" : "CodeSystem",
+  "url" : "https://biometria.gointerop.com/fhir/CodeSystem/status-biometrico-cs",
+  "version" : "0.1.0",
+  "name" : "StatusBiometricoCS"
+},
+{
+  "id" : "tipo-evento-biometrico",
+  "type" : "CodeSystem",
+  "url" : "https://biometria.gointerop.com/fhir/CodeSystem/tipo-evento-biometrico",
+  "version" : "0.1.0",
+  "name" : "TipoEventoBiometrico"
+},
+{
+  "id" : "com.gointerop.biometria.fhir",
+  "type" : "ImplementationGuide",
+  "url" : "https://biometria.gointerop.com/fhir/ImplementationGuide/com.gointerop.biometria.fhir",
+  "version" : "0.1.0",
+  "name" : "BiometriaIG"
+},
+{
+  "id" : "carteirinha-beneficiario",
+  "type" : "NamingSystem",
+  "url" : "https://biometria.gointerop.com/fhir/NamingSystem/carteirinha-beneficiario",
+  "version" : "0.1.0",
+  "name" : "CarteirinhaBeneficiario"
+},
+{
+  "id" : "template-biometrico",
+  "type" : "NamingSystem",
+  "url" : "https://biometria.gointerop.com/fhir/NamingSystem/template-biometrico",
+  "version" : "0.1.0",
+  "name" : "TemplateBiometrico"
+},
+{
+  "id" : "AtendimentoBiometria",
+  "type" : "StructureDefinition",
+  "url" : "https://biometria.gointerop.com/fhir/StructureDefinition/AtendimentoBiometria",
+  "version" : "0.1.0",
+  "name" : "AtendimentoBiometria"
+},
+{
+  "id" : "AutenticacaoBiometricaFacial",
+  "type" : "StructureDefinition",
+  "url" : "https://biometria.gointerop.com/fhir/StructureDefinition/AutenticacaoBiometricaFacial",
+  "version" : "0.1.0",
+  "name" : "AutenticacaoBiometricaFacial"
+},
+{
+  "id" : "BeneficiarioBiometria",
+  "type" : "StructureDefinition",
+  "url" : "https://biometria.gointerop.com/fhir/StructureDefinition/BeneficiarioBiometria",
+  "version" : "0.1.0",
+  "name" : "BeneficiarioBiometria"
+},
+{
+  "id" : "CapturaBiometricaFacial",
+  "type" : "StructureDefinition",
+  "url" : "https://biometria.gointerop.com/fhir/StructureDefinition/CapturaBiometricaFacial",
+  "version" : "0.1.0",
+  "name" : "CapturaBiometricaFacial"
+},
+{
+  "id" : "ConsentimentoBiometria",
+  "type" : "StructureDefinition",
+  "url" : "https://biometria.gointerop.com/fhir/StructureDefinition/ConsentimentoBiometria",
+  "version" : "0.1.0",
+  "name" : "ConsentimentoBiometria"
+},
+{
+  "id" : "MyPatient",
+  "type" : "StructureDefinition",
+  "url" : "https://biometria.gointerop.com/fhir/StructureDefinition/MyPatient",
+  "version" : "0.1.0",
+  "name" : "MyPatient"
+},
+{
+  "id" : "OperadoraSaude",
+  "type" : "StructureDefinition",
+  "url" : "https://biometria.gointerop.com/fhir/StructureDefinition/OperadoraSaude",
+  "version" : "0.1.0",
+  "name" : "OperadoraSaude"
+},
+{
+  "id" : "PrestadorSaude",
+  "type" : "StructureDefinition",
+  "url" : "https://biometria.gointerop.com/fhir/StructureDefinition/PrestadorSaude",
+  "version" : "0.1.0",
+  "name" : "PrestadorSaude"
+},
+{
+  "id" : "ext-canal-autenticacao",
+  "type" : "StructureDefinition",
+  "url" : "https://biometria.gointerop.com/fhir/StructureDefinition/ext-canal-autenticacao",
+  "version" : "0.1.0",
+  "name" : "CanalAutenticacaoExt"
+},
+{
+  "id" : "ext-liveness-detection",
+  "type" : "StructureDefinition",
+  "url" : "https://biometria.gointerop.com/fhir/StructureDefinition/ext-liveness-detection",
+  "version" : "0.1.0",
+  "name" : "LivenessDetection"
+},
+{
+  "id" : "ext-status-biometrico",
+  "type" : "StructureDefinition",
+  "url" : "https://biometria.gointerop.com/fhir/StructureDefinition/ext-status-biometrico",
+  "version" : "0.1.0",
+  "name" : "StatusBiometrico"
+},
+{
+  "id" : "canal-autenticacao-biometrica",
+  "type" : "ValueSet",
+  "url" : "https://biometria.gointerop.com/fhir/ValueSet/canal-autenticacao-biometrica",
+  "version" : "0.1.0",
+  "name" : "CanalAutenticacaoBiometrica"
+},
+{
+  "id" : "canal-autenticacao-vs",
+  "type" : "ValueSet",
+  "url" : "https://biometria.gointerop.com/fhir/ValueSet/canal-autenticacao-vs",
+  "version" : "0.1.0",
+  "name" : "CanalAutenticacaoVS"
+},
+{
+  "id" : "liveness-resultado-vs",
+  "type" : "ValueSet",
+  "url" : "https://biometria.gointerop.com/fhir/ValueSet/liveness-resultado-vs",
+  "version" : "0.1.0",
+  "name" : "LivenessResultadoVS"
+},
+{
+  "id" : "resultado-biometrico",
+  "type" : "ValueSet",
+  "url" : "https://biometria.gointerop.com/fhir/ValueSet/resultado-biometrico",
+  "version" : "0.1.0",
+  "name" : "ResultadoBiometrico"
+},
+{
+  "id" : "resultado-verificacao-biometrica",
+  "type" : "ValueSet",
+  "url" : "https://biometria.gointerop.com/fhir/ValueSet/resultado-verificacao-biometrica",
+  "version" : "0.1.0",
+  "name" : "ResultadoVerificacaoBiometrica"
+},
+{
+  "id" : "status-biometrico-vs",
+  "type" : "ValueSet",
+  "url" : "https://biometria.gointerop.com/fhir/ValueSet/status-biometrico-vs",
+  "version" : "0.1.0",
+  "name" : "StatusBiometricoVS"
+}]

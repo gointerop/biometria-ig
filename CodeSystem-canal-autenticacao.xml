@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="canal-autenticacao"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narrativa gerada: CodeSystem canal-autenticacao</b></p><a name="canal-autenticacao"> </a><a name="hccanal-autenticacao"> </a><p>Este case-sensitive sistema de código <code>https://biometria.gointerop.com/fhir/CodeSystem/canal-autenticacao</code> define o seguinte códigos:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Código</b></td><td><b>Ecrã</b></td><td><b>Definição</b></td></tr><tr><td style="white-space:nowrap">sistema-operadora<a name="canal-autenticacao-sistema-operadora"> </a></td><td>Sistema da Operadora</td><td>Autenticação realizada pelo operador via sistema da operadora (presencial).</td></tr><tr><td style="white-space:nowrap">sistema-prestador<a name="canal-autenticacao-sistema-prestador"> </a></td><td>Sistema do Prestador</td><td>Autenticação realizada no início do atendimento no sistema do prestador (presencial).</td></tr><tr><td style="white-space:nowrap">app-beneficiario<a name="canal-autenticacao-app-beneficiario"> </a></td><td>App do Beneficiário</td><td>Autenticação realizada pelo próprio beneficiário via aplicativo da operadora (teleatendimento).</td></tr></table></div>
+  </text>
+  <url value="https://biometria.gointerop.com/fhir/CodeSystem/canal-autenticacao"/>
+  <version value="0.1.0"/>
+  <name value="CanalAutenticacao"/>
+  <title value="Canal de Autenticação Biométrica"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-03-20T20:23:12+00:00"/>
+  <publisher value="GOInterop Tecnologia LTDA"/>
+  <contact>
+    <name value="GOInterop Tecnologia LTDA"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://gointerop.com"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="contato@gointerop.com"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Italo Macedo"/>
+    <telecom>
+      <system value="email"/>
+      <value value="italo@gointerop.com"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Claudio Junior"/>
+    <telecom>
+      <system value="email"/>
+      <value value="claudio@gointerop.com"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Fernando Araujo"/>
+    <telecom>
+      <system value="email"/>
+      <value value="fernando@gointerop.com"/>
+    </telecom>
+  </contact>
+  <description value="Define o canal pelo qual a autenticação biométrica facial do beneficiário foi realizada."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="BR"/>
+      <display value="Brazil"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="3"/>
+  <concept>
+    <code value="sistema-operadora"/>
+    <display value="Sistema da Operadora"/>
+    <definition value="Autenticação realizada pelo operador via sistema da operadora (presencial)."/>
+  </concept>
+  <concept>
+    <code value="sistema-prestador"/>
+    <display value="Sistema do Prestador"/>
+    <definition value="Autenticação realizada no início do atendimento no sistema do prestador (presencial)."/>
+  </concept>
+  <concept>
+    <code value="app-beneficiario"/>
+    <display value="App do Beneficiário"/>
+    <definition value="Autenticação realizada pelo próprio beneficiário via aplicativo da operadora (teleatendimento)."/>
+  </concept>
+</CodeSystem>

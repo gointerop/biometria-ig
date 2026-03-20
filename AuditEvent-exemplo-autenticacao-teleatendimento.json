@@ -1,0 +1,69 @@
+{
+  "resourceType" : "AuditEvent",
+  "id" : "exemplo-autenticacao-teleatendimento",
+  "meta" : {
+    "profile" : ["https://biometria.gointerop.com/fhir/StructureDefinition/AutenticacaoBiometricaFacial"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: AuditEvent exemplo-autenticacao-teleatendimento</b></p><a name=\"exemplo-autenticacao-teleatendimento\"> </a><a name=\"hcexemplo-autenticacao-teleatendimento\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Perfil: <a href=\"StructureDefinition-AutenticacaoBiometricaFacial.html\">Autenticação Biométrica Facial</a></p></div><p><b>Canal de Autenticação Biométrica</b>: app-beneficiario</p><blockquote><p><b>Prova de Vida (Liveness Detection)</b></p><ul><li>executado: true</li><li>resultado: aprovado</li></ul></blockquote><p><b>type</b>: DICOM: 110114 (User Authentication)</p><p><b>subtype</b>: <a href=\"CodeSystem-tipo-evento-biometrico.html#tipo-evento-biometrico-autenticacao-teleatendimento\">Tipo de Evento Biométrico: autenticacao-teleatendimento</a> (Autenticação de Teleatendimento)</p><p><b>action</b>: Execute</p><p><b>recorded</b>: 2026-03-20 16:45:00-0300</p><p><b>outcome</b>: Success</p><p><b>outcomeDesc</b>: Fotografia validada com sucesso. Teleatendimento liberado para o beneficiário.</p><blockquote><p><b>agent</b></p><p><b>type</b>: <span title=\"Códigos:{http://terminology.hl7.org/CodeSystem/v3-ParticipationType PAT}\">PAT</span></p><p><b>who</b>: <a href=\"Patient-exemplo-beneficiario.html\">Maria da Silva(official) Female, DoB: 1990-04-15 ( https://saude.gov.br/fhir/sid/cns#898001160152321\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>requestor</b>: true</p></blockquote><blockquote><p><b>agent</b></p><p><b>type</b>: <span title=\"Códigos:{http://terminology.hl7.org/CodeSystem/v3-ParticipationType CST}\">custodian</span></p><p><b>who</b>: <a href=\"Organization-exemplo-operadora.html\">Organization Operadora Saúde Exemplo S.A.</a></p><p><b>requestor</b>: false</p></blockquote><h3>Sources</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Observer</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Organization-exemplo-operadora.html\">Organization Operadora Saúde Exemplo S.A.</a></td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "https://biometria.gointerop.com/fhir/StructureDefinition/ext-canal-autenticacao",
+    "valueCode" : "app-beneficiario"
+  },
+  {
+    "extension" : [{
+      "url" : "executado",
+      "valueBoolean" : true
+    },
+    {
+      "url" : "resultado",
+      "valueCode" : "aprovado"
+    }],
+    "url" : "https://biometria.gointerop.com/fhir/StructureDefinition/ext-liveness-detection"
+  }],
+  "type" : {
+    "system" : "http://dicom.nema.org/resources/ontology/DCM",
+    "code" : "110114",
+    "display" : "User Authentication"
+  },
+  "subtype" : [{
+    "system" : "https://biometria.gointerop.com/fhir/CodeSystem/tipo-evento-biometrico",
+    "code" : "autenticacao-teleatendimento",
+    "display" : "Autenticação de Teleatendimento"
+  }],
+  "action" : "E",
+  "recorded" : "2026-03-20T16:45:00-03:00",
+  "outcome" : "0",
+  "outcomeDesc" : "Fotografia validada com sucesso. Teleatendimento liberado para o beneficiário.",
+  "agent" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+        "code" : "PAT"
+      }]
+    },
+    "who" : {
+      "reference" : "Patient/exemplo-beneficiario"
+    },
+    "requestor" : true
+  },
+  {
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+        "code" : "CST"
+      }]
+    },
+    "who" : {
+      "reference" : "Organization/exemplo-operadora"
+    },
+    "requestor" : false
+  }],
+  "source" : {
+    "observer" : {
+      "reference" : "Organization/exemplo-operadora"
+    }
+  }
+}

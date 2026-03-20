@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Casos de Uso - Guia de Implementação FHIR R4 para Biometria Facial de Beneficiários v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"2"}
+    h3,h4,h5,h6{--heading-prefix:"2"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Guia de Implementação FHIR R4 para Biometria Facial de Beneficiários</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - STU1
+
+
+
+  <img alt="Brazil flag" src="assets/images/bra.svg" height="16" title="Brazil"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="casos-de-uso.html">Casos de Uso</a>
+  </li>
+  <li>
+    <a href="arquitetura.html">Arquitetura</a>
+  </li>
+  <li>
+    <a href="conformidade.html">Conformidade</a>
+  </li>
+  <li>
+    <a href="seguranca.html">Segurança</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Casos de Uso</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Guia de Implementação FHIR R4 para Biometria Facial de Beneficiários - Compilação de desenvolvimento local (v0.1.0) construída pelas ferramentas de compilação FHIR (HL7&reg; FHIR&reg; Standard). Veja o <a href='https://biometria.gointerop.com/fhir/history.html'>Diretório de versões publicadas</a></p><!--EndReleaseHeader-->
+  <h2>Casos de Uso</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#casos-de-uso" id="markdown-toc-casos-de-uso">Casos de Uso</a>    <ul>
+      <li><a href="#caso-de-uso-1--captura-inicial-da-biometria-facial" id="markdown-toc-caso-de-uso-1--captura-inicial-da-biometria-facial">Caso de Uso 1 — Captura Inicial da Biometria Facial</a>        <ul>
+          <li><a href="#fluxo-principal" id="markdown-toc-fluxo-principal">Fluxo Principal</a></li>
+          <li><a href="#fluxos-alternativos" id="markdown-toc-fluxos-alternativos">Fluxos Alternativos</a></li>
+          <li><a href="#mapeamento-fhir" id="markdown-toc-mapeamento-fhir">Mapeamento FHIR</a></li>
+        </ul>
+      </li>
+      <li><a href="#caso-de-uso-2--autenticação-de-presença-via-sistema-da-operadora" id="markdown-toc-caso-de-uso-2--autenticação-de-presença-via-sistema-da-operadora">Caso de Uso 2 — Autenticação de Presença via Sistema da Operadora</a>        <ul>
+          <li><a href="#fluxo-principal-1" id="markdown-toc-fluxo-principal-1">Fluxo Principal</a></li>
+          <li><a href="#fluxos-alternativos-1" id="markdown-toc-fluxos-alternativos-1">Fluxos Alternativos</a></li>
+          <li><a href="#mapeamento-fhir-1" id="markdown-toc-mapeamento-fhir-1">Mapeamento FHIR</a></li>
+        </ul>
+      </li>
+      <li><a href="#caso-de-uso-3--autenticação-no-início-do-atendimento-prestador" id="markdown-toc-caso-de-uso-3--autenticação-no-início-do-atendimento-prestador">Caso de Uso 3 — Autenticação no Início do Atendimento (Prestador)</a>        <ul>
+          <li><a href="#fluxo-principal-2" id="markdown-toc-fluxo-principal-2">Fluxo Principal</a></li>
+          <li><a href="#fluxos-alternativos-2" id="markdown-toc-fluxos-alternativos-2">Fluxos Alternativos</a></li>
+          <li><a href="#mapeamento-fhir-2" id="markdown-toc-mapeamento-fhir-2">Mapeamento FHIR</a></li>
+        </ul>
+      </li>
+      <li><a href="#caso-de-uso-4--autenticação-via-app-da-operadora-teleatendimento" id="markdown-toc-caso-de-uso-4--autenticação-via-app-da-operadora-teleatendimento">Caso de Uso 4 — Autenticação via App da Operadora (Teleatendimento)</a>        <ul>
+          <li><a href="#fluxo-principal-3" id="markdown-toc-fluxo-principal-3">Fluxo Principal</a></li>
+          <li><a href="#fluxos-alternativos-3" id="markdown-toc-fluxos-alternativos-3">Fluxos Alternativos</a></li>
+          <li><a href="#mapeamento-fhir-3" id="markdown-toc-mapeamento-fhir-3">Mapeamento FHIR</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+<h1 id="casos-de-uso">Casos de Uso</h1>
+
+<p>Este guia implementa os quatro casos de uso definidos na <strong>Norma Orientativa ANS v5</strong> para uso de biometria facial na identificação de beneficiários de planos de saúde.</p>
+
+<hr />
+
+<h2 id="caso-de-uso-1--captura-inicial-da-biometria-facial">Caso de Uso 1 — Captura Inicial da Biometria Facial</h2>
+
+<p><strong>Atores:</strong> Beneficiário, Operadora/Prestador
+<strong>Pré-condições:</strong> Sistema de cadastro ativo; câmera habilitada.</p>
+
+<h3 id="fluxo-principal">Fluxo Principal</h3>
+
+<ol>
+  <li>Beneficiário acessa software da Operadora/Prestador.</li>
+  <li>Sistema solicita captura facial via câmera.</li>
+  <li>Beneficiário posiciona rosto conforme orientações.</li>
+  <li>Sistema valida qualidade da imagem (nível de detalhes, iluminação).</li>
+  <li>Biometria é criptografada e armazenada no banco de dados.</li>
+</ol>
+
+<h3 id="fluxos-alternativos">Fluxos Alternativos</h3>
+
+<ul>
+  <li><strong>Validação falha:</strong> Sistema solicita nova captura.</li>
+  <li><strong>Sistema inoperante:</strong> Operadora ou preposto cancela a captura e reagenda.</li>
+</ul>
+
+<h3 id="mapeamento-fhir">Mapeamento FHIR</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Evento</th>
+      <th>Recurso FHIR</th>
+      <th>Perfil</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Captura da imagem facial</td>
+      <td><code class="language-plaintext highlighter-rouge">Media</code></td>
+      <td><a href="StructureDefinition-CapturaBiometricaFacial.html"><code class="language-plaintext highlighter-rouge">CapturaBiometricaFacial</code></a></td>
+    </tr>
+    <tr>
+      <td>Consentimento LGPD</td>
+      <td><code class="language-plaintext highlighter-rouge">Consent</code></td>
+      <td><a href="StructureDefinition-ConsentimentoBiometria.html"><code class="language-plaintext highlighter-rouge">ConsentimentoBiometria</code></a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Exemplo:</strong> <a href="Media-exemplo-captura-biometrica.html">Media/exemplo-captura-biometrica</a></p>
+
+<hr />
+
+<h2 id="caso-de-uso-2--autenticação-de-presença-via-sistema-da-operadora">Caso de Uso 2 — Autenticação de Presença via Sistema da Operadora</h2>
+
+<p><strong>Atores:</strong> Beneficiário, Sistema da Operadora
+<strong>Pré-condições:</strong> Biometria previamente cadastrada.</p>
+
+<h3 id="fluxo-principal-1">Fluxo Principal</h3>
+
+<ol>
+  <li>Usuário da operadora ou prestador inicia sessão no software.</li>
+  <li>Sistema captura a foto do beneficiário, transmite para o sistema da operadora e ativa autenticação facial.</li>
+  <li>Reconhecimento compara dados com template armazenado. Opcionalmente pode haver prova de vida (liveness) passivo, sem exigir movimento do beneficiário.</li>
+  <li>Caso reconheça que a fotografia captada é a mesma armazenada, retorna confirmação e registra a presença do beneficiário no atendimento.</li>
+</ol>
+
+<h3 id="fluxos-alternativos-1">Fluxos Alternativos</h3>
+
+<ul>
+  <li><strong>Fluxo alternativo:</strong> Exibição da Carteirinha de identificação do beneficiário para o usuário.</li>
+  <li><strong>Validação falha:</strong> Informa que o beneficiário não corresponde a nenhum registro armazenado.</li>
+  <li><strong>Sistema inoperante:</strong> Operadora ou preposto cancela a captura e segue para o fluxo alternativo.</li>
+</ul>
+
+<h3 id="mapeamento-fhir-1">Mapeamento FHIR</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Evento</th>
+      <th>Recurso FHIR</th>
+      <th>Perfil</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Autenticação biométrica</td>
+      <td><code class="language-plaintext highlighter-rouge">AuditEvent</code></td>
+      <td><a href="StructureDefinition-AutenticacaoBiometricaFacial.html"><code class="language-plaintext highlighter-rouge">AutenticacaoBiometricaFacial</code></a></td>
+    </tr>
+    <tr>
+      <td>Canal: <code class="language-plaintext highlighter-rouge">sistema-operadora</code></td>
+      <td>Extension</td>
+      <td><a href="StructureDefinition-ext-canal-autenticacao.html"><code class="language-plaintext highlighter-rouge">ext-canal-autenticacao</code></a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Exemplo:</strong> <a href="AuditEvent-exemplo-autenticacao-presenca.html">AuditEvent/exemplo-autenticacao-presenca</a></p>
+
+<hr />
+
+<h2 id="caso-de-uso-3--autenticação-no-início-do-atendimento-prestador">Caso de Uso 3 — Autenticação no Início do Atendimento (Prestador)</h2>
+
+<p><strong>Atores:</strong> Beneficiário, Sistema da Operadora
+<strong>Pré-condições:</strong> Biometria previamente cadastrada.</p>
+
+<h3 id="fluxo-principal-2">Fluxo Principal</h3>
+
+<ol>
+  <li>Usuário da operadora ou prestador inicia sessão no software.</li>
+  <li>Sistema captura a foto do beneficiário, transmite para o sistema da operadora e ativa autenticação facial.</li>
+  <li>Reconhecimento compara dados com template armazenado. Opcionalmente pode haver prova de vida (liveness) passivo.</li>
+  <li>Caso reconheça, retorna confirmação e autoriza o início do atendimento.</li>
+</ol>
+
+<h3 id="fluxos-alternativos-2">Fluxos Alternativos</h3>
+
+<ul>
+  <li><strong>Fluxo alternativo:</strong> Exibição da Carteirinha juntamente do documento oficial com foto.</li>
+  <li><strong>Validação falha:</strong> Informa que o beneficiário não corresponde e não autoriza o atendimento.</li>
+  <li><strong>Sistema inoperante:</strong> Operadora ou preposto cancela a captura e segue para o fluxo alternativo.</li>
+</ul>
+
+<h3 id="mapeamento-fhir-2">Mapeamento FHIR</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Evento</th>
+      <th>Recurso FHIR</th>
+      <th>Perfil</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Autenticação biométrica</td>
+      <td><code class="language-plaintext highlighter-rouge">AuditEvent</code></td>
+      <td><a href="StructureDefinition-AutenticacaoBiometricaFacial.html"><code class="language-plaintext highlighter-rouge">AutenticacaoBiometricaFacial</code></a></td>
+    </tr>
+    <tr>
+      <td>Canal: <code class="language-plaintext highlighter-rouge">sistema-prestador</code></td>
+      <td>Extension</td>
+      <td><a href="StructureDefinition-ext-canal-autenticacao.html"><code class="language-plaintext highlighter-rouge">ext-canal-autenticacao</code></a></td>
+    </tr>
+    <tr>
+      <td>Atendimento iniciado</td>
+      <td><code class="language-plaintext highlighter-rouge">Encounter</code></td>
+      <td><a href="StructureDefinition-AtendimentoBiometria.html"><code class="language-plaintext highlighter-rouge">AtendimentoBiometria</code></a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Exemplo:</strong> <a href="AuditEvent-exemplo-autenticacao-atendimento.html">AuditEvent/exemplo-autenticacao-atendimento</a></p>
+
+<hr />
+
+<h2 id="caso-de-uso-4--autenticação-via-app-da-operadora-teleatendimento">Caso de Uso 4 — Autenticação via App da Operadora (Teleatendimento)</h2>
+
+<p><strong>Atores:</strong> Beneficiário, Aplicativo da Operadora instalado no celular do beneficiário
+<strong>Pré-condições:</strong> Biometria previamente cadastrada e aplicativo da operadora instalado no celular.</p>
+
+<h3 id="fluxo-principal-3">Fluxo Principal</h3>
+
+<ol>
+  <li>Beneficiário inicia sessão no aplicativo da operadora.</li>
+  <li>Sistema captura a foto do beneficiário, transmite para o sistema da operadora e ativa autenticação facial.</li>
+  <li>Reconhecimento compara dados com template armazenado no sistema da operadora. Opcionalmente pode haver prova de vida (liveness) passivo.</li>
+  <li>Caso reconheça, retorna em tela para o beneficiário que a fotografia foi validada com sucesso e libera o atendimento.</li>
+</ol>
+
+<h3 id="fluxos-alternativos-3">Fluxos Alternativos</h3>
+
+<ul>
+  <li><strong>Fluxo alternativo:</strong> Processo de autorização existente.</li>
+  <li><strong>Validação falha:</strong> Informa que o beneficiário não corresponde a nenhum registro armazenado.</li>
+  <li><strong>Sistema inoperante:</strong> Operadora ou preposto cancela a captura e segue para o fluxo alternativo.</li>
+</ul>
+
+<h3 id="mapeamento-fhir-3">Mapeamento FHIR</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Evento</th>
+      <th>Recurso FHIR</th>
+      <th>Perfil</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Autenticação biométrica</td>
+      <td><code class="language-plaintext highlighter-rouge">AuditEvent</code></td>
+      <td><a href="StructureDefinition-AutenticacaoBiometricaFacial.html"><code class="language-plaintext highlighter-rouge">AutenticacaoBiometricaFacial</code></a></td>
+    </tr>
+    <tr>
+      <td>Canal: <code class="language-plaintext highlighter-rouge">app-beneficiario</code></td>
+      <td>Extension</td>
+      <td><a href="StructureDefinition-ext-canal-autenticacao.html"><code class="language-plaintext highlighter-rouge">ext-canal-autenticacao</code></a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Exemplo:</strong> <a href="AuditEvent-exemplo-autenticacao-teleatendimento.html">AuditEvent/exemplo-autenticacao-teleatendimento</a></p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://gointerop.com">GOInterop Tecnologia LTDA</a>.  Package com.gointerop.biometria.fhir#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Mar 20, 2026 20:23+0000">2026-03-20</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

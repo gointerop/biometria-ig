@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="status-biometrico-vs"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narrativa gerada: ValueSet status-biometrico-vs</b></p><a name="status-biometrico-vs"> </a><a name="hcstatus-biometrico-vs"> </a><ul><li>Include estes códigos, tal como definidos em <a href="CodeSystem-status-biometrico-cs.html"><code>https://biometria.gointerop.com/fhir/CodeSystem/status-biometrico-cs</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> versão &#x1F4E6;0.1.0</span><table class="none"><tr><td style="white-space:nowrap"><b>Código</b></td><td><b>Ecrã</b></td><td><b>Definição</b></td></tr><tr><td><a href="CodeSystem-status-biometrico-cs.html#status-biometrico-cs-cadastrado">cadastrado</a></td><td style="color: #cccccc">Cadastrado</td><td>O beneficiário possui biometria facial cadastrada e ativa na operadora.</td></tr><tr><td><a href="CodeSystem-status-biometrico-cs.html#status-biometrico-cs-nao-cadastrado">nao-cadastrado</a></td><td style="color: #cccccc">Não Cadastrado</td><td>O beneficiário não possui biometria facial cadastrada na operadora.</td></tr><tr><td><a href="CodeSystem-status-biometrico-cs.html#status-biometrico-cs-desativado">desativado</a></td><td style="color: #cccccc">Desativado</td><td>O cadastro de biometria facial do beneficiário foi desativado.</td></tr></table></li></ul></div>
+  </text>
+  <url value="https://biometria.gointerop.com/fhir/ValueSet/status-biometrico-vs"/>
+  <version value="0.1.0"/>
+  <name value="StatusBiometricoVS"/>
+  <title value="Status de Cadastro Biométrico"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-03-20T20:23:12+00:00"/>
+  <publisher value="GOInterop Tecnologia LTDA"/>
+  <contact>
+    <name value="GOInterop Tecnologia LTDA"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://gointerop.com"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="contato@gointerop.com"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Italo Macedo"/>
+    <telecom>
+      <system value="email"/>
+      <value value="italo@gointerop.com"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Claudio Junior"/>
+    <telecom>
+      <system value="email"/>
+      <value value="claudio@gointerop.com"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Fernando Araujo"/>
+    <telecom>
+      <system value="email"/>
+      <value value="fernando@gointerop.com"/>
+    </telecom>
+  </contact>
+  <description value="Valores possíveis para o status do cadastro biométrico facial do beneficiário."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="BR"/>
+      <display value="Brazil"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="https://biometria.gointerop.com/fhir/CodeSystem/status-biometrico-cs"/>
+      <concept>
+        <code value="cadastrado"/>
+      </concept>
+      <concept>
+        <code value="nao-cadastrado"/>
+      </concept>
+      <concept>
+        <code value="desativado"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

@@ -1,0 +1,85 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://biometria.gointerop.com/fhir/CodeSystem/status-biometrico-cs> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "status-biometrico-cs"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: CodeSystem status-biometrico-cs</b></p><a name=\"status-biometrico-cs\"> </a><a name=\"hcstatus-biometrico-cs\"> </a><p>Este case-sensitive sistema de código <code>https://biometria.gointerop.com/fhir/CodeSystem/status-biometrico-cs</code> define o seguinte códigos:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Código</b></td><td><b>Ecrã</b></td><td><b>Definição</b></td></tr><tr><td style=\"white-space:nowrap\">cadastrado<a name=\"status-biometrico-cs-cadastrado\"> </a></td><td>Cadastrado</td><td>O beneficiário possui biometria facial cadastrada e ativa na operadora.</td></tr><tr><td style=\"white-space:nowrap\">nao-cadastrado<a name=\"status-biometrico-cs-nao-cadastrado\"> </a></td><td>Não Cadastrado</td><td>O beneficiário não possui biometria facial cadastrada na operadora.</td></tr><tr><td style=\"white-space:nowrap\">desativado<a name=\"status-biometrico-cs-desativado\"> </a></td><td>Desativado</td><td>O cadastro de biometria facial do beneficiário foi desativado.</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "https://biometria.gointerop.com/fhir/CodeSystem/status-biometrico-cs"^^xsd:anyURI ;
+     fhir:l <https://biometria.gointerop.com/fhir/CodeSystem/status-biometrico-cs>
+  ] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "StatusBiometricoCS"] ; # 
+  fhir:title [ fhir:v "Status de Cadastro Biométrico"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2026-03-20T20:23:12+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "GOInterop Tecnologia LTDA"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "GOInterop Tecnologia LTDA" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://gointerop.com" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "contato@gointerop.com" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Italo Macedo" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "italo@gointerop.com" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Claudio Junior" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "claudio@gointerop.com" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Fernando Araujo" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fernando@gointerop.com" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Códigos de status para o cadastro de biometria facial do beneficiário."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ;
+         fhir:l <urn:iso:std:iso:3166>
+       ] ;
+       fhir:code [ fhir:v "BR" ] ;
+       fhir:display [ fhir:v "Brazil" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "3"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "cadastrado" ] ;
+     fhir:display [ fhir:v "Cadastrado" ] ;
+     fhir:definition [ fhir:v "O beneficiário possui biometria facial cadastrada e ativa na operadora." ]
+  ] [
+     fhir:code [ fhir:v "nao-cadastrado" ] ;
+     fhir:display [ fhir:v "Não Cadastrado" ] ;
+     fhir:definition [ fhir:v "O beneficiário não possui biometria facial cadastrada na operadora." ]
+  ] [
+     fhir:code [ fhir:v "desativado" ] ;
+     fhir:display [ fhir:v "Desativado" ] ;
+     fhir:definition [ fhir:v "O cadastro de biometria facial do beneficiário foi desativado." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

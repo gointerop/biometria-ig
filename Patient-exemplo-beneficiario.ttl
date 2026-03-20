@@ -1,0 +1,78 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://biometria.gointerop.com/fhir/Patient/exemplo-beneficiario> a fhir:Patient ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "exemplo-beneficiario"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://biometria.gointerop.com/fhir/StructureDefinition/BeneficiarioBiometria"^^xsd:anyURI ;
+       fhir:l <https://biometria.gointerop.com/fhir/StructureDefinition/BeneficiarioBiometria>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: Patient exemplo-beneficiario</b></p><a name=\"exemplo-beneficiario\"> </a><a name=\"hcexemplo-beneficiario\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Perfil: <a href=\"StructureDefinition-BeneficiarioBiometria.html\">Beneficiário com Biometria Facial</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Maria da Silva(official) Female, DoB: 1990-04-15 ( https://saude.gov.br/fhir/sid/cns#898001160152321 (use: official, ))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"O registo está ativo\">Ativo:</td><td colspan=\"3\">true</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Other Ids (see the one above)\">Other Ids:</td><td colspan=\"3\"><ul><li><a href=\"NamingSystem-carteirinha-beneficiario.html\" title=\"Identificador da carteirinha (cartão de identificação) do beneficiário emitida pela operadora de plano de saúde.\">CarteirinhaBeneficiario</a>/0001234567890 (utilização: official, )</li><li><code>https://saude.gov.br/fhir/sid/cpf</code>/12345678901 (utilização: official, )</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Formas de contactar o doente\">Detalhes do contacto</td><td colspan=\"3\"><ul><li><a href=\"tel:+5511987654321\">+5511987654321</a></li><li>Rua das Palmeiras, 200 São Paulo SP 04567-000 BR (home)</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Indica o status do cadastro de biometria facial do beneficiário na operadora de saúde.\"><a href=\"StructureDefinition-ext-status-biometrico.html\">Status de Cadastro Biométrico</a></td><td colspan=\"3\">cadastrado</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "https://biometria.gointerop.com/fhir/StructureDefinition/ext-status-biometrico"^^xsd:anyURI ;
+       fhir:l <https://biometria.gointerop.com/fhir/StructureDefinition/ext-status-biometrico>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "cadastrado"
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:system [
+       fhir:v "https://biometria.gointerop.com/fhir/sid/carteirinha-beneficiario"^^xsd:anyURI ;
+       fhir:l <https://biometria.gointerop.com/fhir/sid/carteirinha-beneficiario>
+     ] ;
+     fhir:value [ fhir:v "0001234567890" ]
+  ] [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:system [
+       fhir:v "https://saude.gov.br/fhir/sid/cpf"^^xsd:anyURI ;
+       fhir:l <https://saude.gov.br/fhir/sid/cpf>
+     ] ;
+     fhir:value [ fhir:v "12345678901" ]
+  ] [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:system [
+       fhir:v "https://saude.gov.br/fhir/sid/cns"^^xsd:anyURI ;
+       fhir:l <https://saude.gov.br/fhir/sid/cns>
+     ] ;
+     fhir:value [ fhir:v "898001160152321" ]
+  ] ) ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:text [ fhir:v "Maria da Silva" ] ;
+     fhir:family [ fhir:v "Silva" ] ;
+     fhir:given ( [ fhir:v "Maria" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "+5511987654321" ] ;
+     fhir:use [ fhir:v "mobile" ]
+  ] ) ; # 
+  fhir:gender [ fhir:v "female"] ; # 
+  fhir:birthDate [ fhir:v "1990-04-15"^^xsd:date] ; # 
+  fhir:address ( [
+     fhir:use [ fhir:v "home" ] ;
+     fhir:line ( [ fhir:v "Rua das Palmeiras, 200" ] ) ;
+     fhir:city [ fhir:v "São Paulo" ] ;
+     fhir:state [ fhir:v "SP" ] ;
+     fhir:postalCode [ fhir:v "04567-000" ] ;
+     fhir:country [ fhir:v "BR" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

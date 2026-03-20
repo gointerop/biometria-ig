@@ -1,0 +1,70 @@
+{
+  "codeSystems" : [{
+    "url" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+    "version" : "4.0.0",
+    "status" : "active",
+    "name" : "ObservationInterpretation",
+    "title" : "ObservationInterpretation",
+    "description" : "One or more codes providing a rough qualitative interpretation of the observation, such as \"normal\" / \"abnormal\", \"low\" / \"high\", \"better\" / \"worse\", \"resistant\" / \"susceptible\", \"expected\" / \"not expected\". The value set is intended to be for ANY use where coded representation of an interpretation is needed.",
+    "oids" : ["2.16.840.1.113883.5.83"],
+    "uses" : {
+    },
+    "ValueSet-resultado-verificacao-biometrica.html" : "Resultado da Verificação Biométrica Facial"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+    "version" : "4.0.0",
+    "status" : "active",
+    "name" : "RoleCode",
+    "title" : "RoleCode",
+    "description" : "A set of codes further specifying the kind of Role; specific classification codes for further qualifying RoleClass codes.",
+    "oids" : ["2.16.840.1.113883.5.111"],
+    "uses" : {
+    },
+    "ValueSet-canal-autenticacao-biometrica.html" : "Canal de Autenticação Biométrica"
+  },
+  {
+    "url" : "https://biometria.gointerop.com/fhir/CodeSystem/canal-autenticacao",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "CanalAutenticacao",
+    "title" : "Canal de Autenticação Biométrica",
+    "description" : "Define o canal pelo qual a autenticação biométrica facial do beneficiário foi realizada.",
+    "uses" : {
+    },
+    "ValueSet-canal-autenticacao-vs.html" : "Canal de Autenticação Biométrica"
+  },
+  {
+    "url" : "https://biometria.gointerop.com/fhir/CodeSystem/liveness-resultado-cs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "LivenessResultadoCS",
+    "title" : "Resultado da Prova de Vida",
+    "description" : "Códigos para resultado da verificação de prova de vida passiva (liveness detection).",
+    "uses" : {
+    },
+    "ValueSet-liveness-resultado-vs.html" : "Resultado da Prova de Vida"
+  },
+  {
+    "url" : "https://biometria.gointerop.com/fhir/CodeSystem/status-biometrico-cs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "StatusBiometricoCS",
+    "title" : "Status de Cadastro Biométrico",
+    "description" : "Códigos de status para o cadastro de biometria facial do beneficiário.",
+    "uses" : {
+    },
+    "ValueSet-status-biometrico-vs.html" : "Status de Cadastro Biométrico"
+  },
+  {
+    "url" : "https://biometria.gointerop.com/fhir/CodeSystem/tipo-evento-biometrico",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "TipoEventoBiometrico",
+    "title" : "Tipo de Evento Biométrico",
+    "description" : "Classifica o tipo de evento relacionado à biometria facial de beneficiários de planos de saúde, conforme norma orientativa ANS v5.",
+    "uses" : {
+    },
+    "ValueSet-resultado-biometrico.html" : "Resultado da Verificação Biométrica"
+  }]
+}

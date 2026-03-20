@@ -1,0 +1,1236 @@
+# Index - Guia de Implementação FHIR R4 para Biometria Facial de Beneficiários v0.1.0
+
+* [**Table of Contents**](toc.md)
+* **Index**
+
+## Index
+
+| | |
+| :--- | :--- |
+| *Official URL*:https://biometria.gointerop.com/fhir/ImplementationGuide/com.gointerop.biometria.fhir | *Version*:0.1.0 |
+| Active as of 2026-03-20 | *Computable Name*:BiometriaIG |
+
+# Guia de Implementação FHIR R4 — Biometria Facial de Beneficiários
+
+## Introdução
+
+Este Guia de Implementação (IG) FHIR R4 define os artefatos necessários para o uso de **biometria facial** na identificação de beneficiários de planos privados de saúde em Prestadores e Operadoras, conforme a **Norma Orientativa ANS v5** (**Norma orientativa de uso de solução de Biometria Facial na identificação de beneficiários de planos privados de saúde em Prestadores e Operadoras**).
+
+## Objetivos
+
+* Padronizar o intercâmbio de informações de biometria facial entre operadoras e prestadores usando FHIR R4.
+* Garantir rastreabilidade e auditoria de todos os eventos de captura e autenticação biométrica.
+* Suportar os quatro casos de uso definidos pela ANS, cobrindo ambientes presenciais e de teleatendimento.
+* Prover um modelo de dados compatível com a **LGPD (Lei 13.709/2018)**, incluindo o registro de consentimento do beneficiário.
+
+## Escopo
+
+Este guia cobre os seguintes casos de uso:
+
+| | | |
+| :--- | :--- | :--- |
+| 1 | Captura Inicial da Biometria Facial | Presencial (Operadora/Prestador) |
+| 2 | Autenticação de Presença via Sistema da Operadora | Presencial |
+| 3 | Autenticação no Início do Atendimento (Prestador) | Presencial |
+| 4 | Autenticação via Aplicativo da Operadora | Teleatendimento |
+
+## Recursos Principais
+
+| | | |
+| :--- | :--- | :--- |
+| `Patient` | `BeneficiarioBiometria` | Beneficiário com status de cadastro biométrico |
+| `Organization` | `OperadoraSaude` | Operadora de plano de saúde |
+| `Organization` | `PrestadorSaude` | Prestador de serviços de saúde |
+| `Media` | `CapturaBiometricaFacial` | Registro da captura facial (CU 1) |
+| `AuditEvent` | `AutenticacaoBiometricaFacial` | Evento de autenticação (CU 2, 3, 4) |
+| `Consent` | `ConsentimentoBiometria` | Consentimento LGPD do beneficiário |
+| `Encounter` | `AtendimentoBiometria` | Atendimento com autenticação biométrica |
+
+## Publicador
+
+**GOInterop Tecnologia LTDA** — [gointerop.com](https://gointerop.com)
+
+Contato: contato@gointerop.com
+
+## Base Normativa
+
+* Norma Orientativa ANS v5 — **Uso de Biometria Facial na identificação de beneficiários de planos privados de saúde**
+* FHIR R4 (HL7 FHIR Release 4.0.1)
+* LGPD — Lei Geral de Proteção de Dados Pessoais (Lei 13.709/2018)
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "ImplementationGuide",
+  "id" : "com.gointerop.biometria.fhir",
+  "url" : "https://biometria.gointerop.com/fhir/ImplementationGuide/com.gointerop.biometria.fhir",
+  "version" : "0.1.0",
+  "name" : "BiometriaIG",
+  "title" : "Guia de Implementação FHIR R4 para Biometria Facial de Beneficiários",
+  "status" : "active",
+  "date" : "2026-03-20T00:00:00.000Z",
+  "publisher" : "GOInterop Tecnologia LTDA",
+  "contact" : [{
+    "name" : "GOInterop Tecnologia LTDA",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://gointerop.com"
+    },
+    {
+      "system" : "email",
+      "value" : "contato@gointerop.com"
+    }]
+  },
+  {
+    "name" : "Italo Macedo",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "italo@gointerop.com",
+      "use" : "work"
+    }]
+  },
+  {
+    "name" : "Claudio Junior",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "claudio@gointerop.com"
+    }]
+  },
+  {
+    "name" : "Fernando Araujo",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "fernando@gointerop.com"
+    }]
+  }],
+  "description" : "Guia de implementação FHIR R4 para uso de biometria facial na identificação de beneficiários de planos privados de saúde em Prestadores e Operadoras, conforme norma orientativa ANS v5.\n",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "BR",
+      "display" : "Brazil"
+    }]
+  }],
+  "packageId" : "com.gointerop.biometria.fhir",
+  "license" : "CC0-1.0",
+  "fhirVersion" : ["4.0.1"],
+  "dependsOn" : [{
+    "id" : "hl7tx",
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment",
+      "valueMarkdown" : "Automatically added as a dependency - all IGs depend on HL7 Terminology"
+    }],
+    "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
+    "packageId" : "hl7.terminology.r4",
+    "version" : "7.1.0"
+  },
+  {
+    "id" : "hl7ext",
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment",
+      "valueMarkdown" : "Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"
+    }],
+    "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
+    "packageId" : "hl7.fhir.uv.extensions.r4",
+    "version" : "5.2.0"
+  },
+  {
+    "id" : "hl7_fhir_uv_ips",
+    "uri" : "http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips",
+    "packageId" : "hl7.fhir.uv.ips",
+    "version" : "1.1.0"
+  }],
+  "definition" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "copyrightyear"
+      },
+      {
+        "url" : "value",
+        "valueString" : "2026+"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "releaselabel"
+      },
+      {
+        "url" : "value",
+        "valueString" : "STU1"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "produce-jekyll-data"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "autoload-resources"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-liquid"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template/liquid"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-liquid"
+      },
+      {
+        "url" : "value",
+        "valueString" : "input/liquid"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-qa"
+      },
+      {
+        "url" : "value",
+        "valueString" : "temp/qa"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-temp"
+      },
+      {
+        "url" : "value",
+        "valueString" : "temp/pages"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-output"
+      },
+      {
+        "url" : "value",
+        "valueString" : "output"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-suppressed-warnings"
+      },
+      {
+        "url" : "value",
+        "valueString" : "input/ignoreWarnings.txt"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-history"
+      },
+      {
+        "url" : "value",
+        "valueString" : "https://biometria.gointerop.com/fhir/history.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "template-html"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template-page.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "template-md"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template-page-md.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-contact"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-context"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-copyright"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-jurisdiction"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-license"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-publisher"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-version"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-wg"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "active-tables"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "fmm-definition"
+      },
+      {
+        "url" : "value",
+        "valueString" : "http://hl7.org/fhir/versions.html#maturity"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "propagate-status"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "excludelogbinaryformat"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "tabbed-snapshots"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
+      "valueCode" : "hl7.fhir.uv.tools.r4#1.1.0"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "copyrightyear"
+      },
+      {
+        "url" : "value",
+        "valueString" : "2026+"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "releaselabel"
+      },
+      {
+        "url" : "value",
+        "valueString" : "STU1"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "produce-jekyll-data"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "autoload-resources"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-liquid"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template/liquid"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-liquid"
+      },
+      {
+        "url" : "value",
+        "valueString" : "input/liquid"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-qa"
+      },
+      {
+        "url" : "value",
+        "valueString" : "temp/qa"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-temp"
+      },
+      {
+        "url" : "value",
+        "valueString" : "temp/pages"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-output"
+      },
+      {
+        "url" : "value",
+        "valueString" : "output"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-suppressed-warnings"
+      },
+      {
+        "url" : "value",
+        "valueString" : "input/ignoreWarnings.txt"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-history"
+      },
+      {
+        "url" : "value",
+        "valueString" : "https://biometria.gointerop.com/fhir/history.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "template-html"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template-page.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "template-md"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template-page-md.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-contact"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-context"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-copyright"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-jurisdiction"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-license"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-publisher"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-version"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-wg"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "active-tables"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "fmm-definition"
+      },
+      {
+        "url" : "value",
+        "valueString" : "http://hl7.org/fhir/versions.html#maturity"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "propagate-status"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "excludelogbinaryformat"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "tabbed-snapshots"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    }],
+    "resource" : [{
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/AtendimentoBiometria"
+      },
+      "name" : "Atendimento com Autenticação Biométrica",
+      "description" : "Atendimento de saúde onde o beneficiário foi autenticado via biometria facial no início. Vincula a autenticação biométrica ao atendimento real. Cobre os Casos de Uso 2, 3 e 4 da norma ANS v5.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/AutenticacaoBiometricaFacial"
+      },
+      "name" : "Autenticação Biométrica Facial",
+      "description" : "Registro de evento de autenticação biométrica facial do beneficiário. Cobre os Casos de Uso 2, 3 e 4 da norma ANS v5: autenticação de presença, autenticação de atendimento e autenticação via app.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/BeneficiarioBiometria"
+      },
+      "name" : "Beneficiário com Biometria Facial",
+      "description" : "Perfil de beneficiário de plano de saúde com suporte a identificação por biometria facial, conforme norma orientativa ANS v5.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ext-canal-autenticacao"
+      },
+      "name" : "Canal de Autenticação Biométrica",
+      "description" : "Indica o canal pelo qual a autenticação biométrica facial do beneficiário foi realizada: sistema da operadora, sistema do prestador ou aplicativo do beneficiário.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/canal-autenticacao-vs"
+      },
+      "name" : "Canal de Autenticação Biométrica",
+      "description" : "Canal utilizado na autenticação biométrica facial do beneficiário.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/canal-autenticacao-biometrica"
+      },
+      "name" : "Canal de Autenticação Biométrica",
+      "description" : "Canal utilizado para autenticação biométrica do beneficiário.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/canal-autenticacao"
+      },
+      "name" : "Canal de Autenticação Biométrica",
+      "description" : "Define o canal pelo qual a autenticação biométrica facial do beneficiário foi realizada.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/CapturaBiometricaFacial"
+      },
+      "name" : "Captura Biométrica Facial",
+      "description" : "Registro da captura inicial da biometria facial do beneficiário. Corresponde ao Caso de Uso 1: Captura Inicial da Biometria Facial (ANS v5).",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "NamingSystem"
+      }],
+      "reference" : {
+        "reference" : "NamingSystem/carteirinha-beneficiario"
+      },
+      "name" : "carteirinha-beneficiario",
+      "description" : "Identificador da carteirinha (cartão de identificação) do beneficiário emitida pela operadora de plano de saúde.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ConsentimentoBiometria"
+      },
+      "name" : "Consentimento para Biometria Facial",
+      "description" : "Consentimento do beneficiário para coleta, armazenamento e uso da biometria facial pela operadora de saúde, conforme exigência da LGPD (Lei 13.709/2018).",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Encounter"
+      }],
+      "reference" : {
+        "reference" : "Encounter/exemplo-atendimento"
+      },
+      "name" : "exemplo-atendimento",
+      "exampleCanonical" : "https://biometria.gointerop.com/fhir/StructureDefinition/AtendimentoBiometria"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "AuditEvent"
+      }],
+      "reference" : {
+        "reference" : "AuditEvent/exemplo-autenticacao-atendimento"
+      },
+      "name" : "exemplo-autenticacao-atendimento",
+      "exampleCanonical" : "https://biometria.gointerop.com/fhir/StructureDefinition/AutenticacaoBiometricaFacial"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "AuditEvent"
+      }],
+      "reference" : {
+        "reference" : "AuditEvent/exemplo-autenticacao-presenca"
+      },
+      "name" : "exemplo-autenticacao-presenca",
+      "exampleCanonical" : "https://biometria.gointerop.com/fhir/StructureDefinition/AutenticacaoBiometricaFacial"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "AuditEvent"
+      }],
+      "reference" : {
+        "reference" : "AuditEvent/exemplo-autenticacao-teleatendimento"
+      },
+      "name" : "exemplo-autenticacao-teleatendimento",
+      "exampleCanonical" : "https://biometria.gointerop.com/fhir/StructureDefinition/AutenticacaoBiometricaFacial"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/exemplo-beneficiario"
+      },
+      "name" : "exemplo-beneficiario",
+      "exampleCanonical" : "https://biometria.gointerop.com/fhir/StructureDefinition/BeneficiarioBiometria"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Media"
+      }],
+      "reference" : {
+        "reference" : "Media/exemplo-captura-biometrica"
+      },
+      "name" : "exemplo-captura-biometrica",
+      "exampleCanonical" : "https://biometria.gointerop.com/fhir/StructureDefinition/CapturaBiometricaFacial"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Consent"
+      }],
+      "reference" : {
+        "reference" : "Consent/exemplo-consentimento-biometria"
+      },
+      "name" : "exemplo-consentimento-biometria",
+      "exampleCanonical" : "https://biometria.gointerop.com/fhir/StructureDefinition/ConsentimentoBiometria"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/exemplo-operadora"
+      },
+      "name" : "exemplo-operadora",
+      "exampleCanonical" : "https://biometria.gointerop.com/fhir/StructureDefinition/OperadoraSaude"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/exemplo-prestador"
+      },
+      "name" : "exemplo-prestador",
+      "exampleCanonical" : "https://biometria.gointerop.com/fhir/StructureDefinition/PrestadorSaude"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/MyPatient"
+      },
+      "name" : "MyPatient",
+      "description" : "An example profile of the Patient resource.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/OperadoraSaude"
+      },
+      "name" : "Operadora de Saúde",
+      "description" : "Operadora de plano de saúde responsável pelo armazenamento e validação da biometria facial dos beneficiários.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/PatientExample"
+      },
+      "name" : "PatientExample",
+      "description" : "An example of a patient with a license to krill.",
+      "exampleCanonical" : "https://biometria.gointerop.com/fhir/StructureDefinition/MyPatient"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/PrestadorSaude"
+      },
+      "name" : "Prestador de Saúde",
+      "description" : "Prestador de serviços de saúde (clínica, hospital, consultório) que utiliza biometria facial para autenticação do beneficiário no início do atendimento.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ext-liveness-detection"
+      },
+      "name" : "Prova de Vida (Liveness Detection)",
+      "description" : "Indica se a prova de vida passiva (liveness detection) foi executada durante a autenticação biométrica e qual o resultado.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/liveness-resultado-vs"
+      },
+      "name" : "Resultado da Prova de Vida",
+      "description" : "Resultado da verificação de prova de vida (liveness detection) passiva.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/liveness-resultado-cs"
+      },
+      "name" : "Resultado da Prova de Vida",
+      "description" : "Códigos para resultado da verificação de prova de vida passiva (liveness detection).",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/resultado-biometrico"
+      },
+      "name" : "Resultado da Verificação Biométrica",
+      "description" : "Resultado da verificação biométrica facial de um beneficiário.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/resultado-verificacao-biometrica"
+      },
+      "name" : "Resultado da Verificação Biométrica Facial",
+      "description" : "Indica o resultado da comparação biométrica entre a foto capturada e o template armazenado.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ext-status-biometrico"
+      },
+      "name" : "Status de Cadastro Biométrico",
+      "description" : "Indica o status do cadastro de biometria facial do beneficiário na operadora de saúde.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/status-biometrico-vs"
+      },
+      "name" : "Status de Cadastro Biométrico",
+      "description" : "Valores possíveis para o status do cadastro biométrico facial do beneficiário.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/status-biometrico-cs"
+      },
+      "name" : "Status de Cadastro Biométrico",
+      "description" : "Códigos de status para o cadastro de biometria facial do beneficiário.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "NamingSystem"
+      }],
+      "reference" : {
+        "reference" : "NamingSystem/template-biometrico"
+      },
+      "name" : "template-biometrico",
+      "description" : "Identificador único do template biométrico facial armazenado pela operadora para o beneficiário.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/tipo-evento-biometrico"
+      },
+      "name" : "Tipo de Evento Biométrico",
+      "description" : "Classifica o tipo de evento relacionado à biometria facial de beneficiários de planos de saúde, conforme norma orientativa ANS v5.",
+      "exampleBoolean" : false
+    }],
+    "page" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+        "valueUrl" : "toc.html"
+      }],
+      "nameUrl" : "toc.html",
+      "title" : "Table of Contents",
+      "generation" : "html",
+      "page" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "index.html"
+        }],
+        "nameUrl" : "index.html",
+        "title" : "Index",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "casos-de-uso.html"
+        }],
+        "nameUrl" : "casos-de-uso.html",
+        "title" : "Casos de Uso",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "arquitetura.html"
+        }],
+        "nameUrl" : "arquitetura.html",
+        "title" : "Arquitetura",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "conformidade.html"
+        }],
+        "nameUrl" : "conformidade.html",
+        "title" : "Conformidade",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "seguranca.html"
+        }],
+        "nameUrl" : "seguranca.html",
+        "title" : "Segurança",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "versionamento.html"
+        }],
+        "nameUrl" : "versionamento.html",
+        "title" : "Versionamento",
+        "generation" : "markdown"
+      }]
+    },
+    "parameter" : [{
+      "code" : "path-resource",
+      "value" : "input/maps"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/capabilities"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/examples"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/extensions"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/models"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/operations"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/profiles"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/resources"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/vocabulary"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/testing"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/history"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "fsh-generated/resources"
+    },
+    {
+      "code" : "path-pages",
+      "value" : "template/config"
+    },
+    {
+      "code" : "path-pages",
+      "value" : "input/images"
+    },
+    {
+      "code" : "path-tx-cache",
+      "value" : "input-cache/txcache"
+    }]
+  }
+}
+
+```

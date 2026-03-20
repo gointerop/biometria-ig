@@ -1,0 +1,56 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://biometria.gointerop.com/fhir/Encounter/exemplo-atendimento> a fhir:Encounter ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "exemplo-atendimento"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://biometria.gointerop.com/fhir/StructureDefinition/AtendimentoBiometria"^^xsd:anyURI ;
+       fhir:l <https://biometria.gointerop.com/fhir/StructureDefinition/AtendimentoBiometria>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: Encounter exemplo-atendimento</b></p><a name=\"exemplo-atendimento\"> </a><a name=\"hcexemplo-atendimento\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Perfil: <a href=\"StructureDefinition-AtendimentoBiometria.html\">Atendimento com Autenticação Biométrica</a></p></div><p><b>status</b>: In Progress</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.1.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB\">ActCode: AMB</a> (ambulatory)</p><p><b>type</b>: <span title=\"Códigos:{http://snomed.info/sct 11429006}\">Consultation</span></p><p><b>subject</b>: <a href=\"Patient-exemplo-beneficiario.html\">Maria da Silva(official) Female, DoB: 1990-04-15 ( https://saude.gov.br/fhir/sid/cns#898001160152321 (use: official, ))</a></p><p><b>period</b>: 2026-03-20 09:15:00-0300 --&gt; (em curso)</p><p><b>serviceProvider</b>: <a href=\"Organization-exemplo-prestador.html\">Organization Clínica Prestadora Exemplo LTDA</a></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "in-progress"] ; # 
+  fhir:class [
+     fhir:system [
+       fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ;
+       fhir:l <http://terminology.hl7.org/CodeSystem/v3-ActCode>
+     ] ;
+     fhir:code [ fhir:v "AMB" ] ;
+     fhir:display [ fhir:v "ambulatory" ]
+  ] ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       a sct:11429006 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "11429006" ] ;
+       fhir:display [ fhir:v "Consultation" ]
+     ] )
+  ] ) ; # 
+  fhir:subject [
+     fhir:l <https://biometria.gointerop.com/fhir/Patient/exemplo-beneficiario> ;
+     fhir:reference [ fhir:v "Patient/exemplo-beneficiario" ]
+  ] ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2026-03-20T09:15:00-03:00"^^xsd:dateTime ]
+  ] ; # 
+  fhir:serviceProvider [
+     fhir:l <https://biometria.gointerop.com/fhir/Organization/exemplo-prestador> ;
+     fhir:reference [ fhir:v "Organization/exemplo-prestador" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

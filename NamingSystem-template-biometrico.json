@@ -1,0 +1,68 @@
+{
+  "resourceType" : "NamingSystem",
+  "id" : "template-biometrico",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: NamingSystem template-biometrico</b></p><a name=\"template-biometrico\"> </a><a name=\"hctemplate-biometrico\"> </a><h3>Resumo</h3><table class=\"grid\"><tr><td>Definição de URL</td><td>https://biometria.gointerop.com/fhir/NamingSystem/template-biometrico</td></tr><tr><td>Versão</td><td>0.1.0</td></tr><tr><td>Nome</td><td>TemplateBiometrico</td></tr><tr><td>Estado</td><td>active</td></tr><tr><td>Definição</td><td><div><p>Identificador único do template biométrico facial armazenado pela operadora para o beneficiário.</p>\n</div></td></tr><tr><td>Editor</td><td>GOInterop Tecnologia LTDA</td></tr></table><h3>Identificadores</h3><table class=\"grid\"><tr><td><b>Tipo</b></td><td><b>Valor</b></td><td><b>Preferenciais</b></td><td><b>Comentário</b></td></tr><tr><td>URI</td><td>https://biometria.gointerop.com/fhir/sid/template-biometrico</td><td>true</td><td>URI canônica para o identificador de template biométrico facial de beneficiário.</td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.url",
+    "valueUri" : "https://biometria.gointerop.com/fhir/NamingSystem/template-biometrico"
+  },
+  {
+    "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.version",
+    "valueString" : "0.1.0"
+  }],
+  "name" : "TemplateBiometrico",
+  "status" : "active",
+  "kind" : "identifier",
+  "date" : "2026-03-20",
+  "publisher" : "GOInterop Tecnologia LTDA",
+  "contact" : [{
+    "name" : "GOInterop Tecnologia LTDA",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://gointerop.com"
+    },
+    {
+      "system" : "email",
+      "value" : "contato@gointerop.com"
+    }]
+  },
+  {
+    "name" : "Italo Macedo",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "italo@gointerop.com",
+      "use" : "work"
+    }]
+  },
+  {
+    "name" : "Claudio Junior",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "claudio@gointerop.com"
+    }]
+  },
+  {
+    "name" : "Fernando Araujo",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "fernando@gointerop.com"
+    }]
+  }],
+  "description" : "Identificador único do template biométrico facial armazenado pela operadora para o beneficiário.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "BR",
+      "display" : "Brazil"
+    }]
+  }],
+  "uniqueId" : [{
+    "type" : "uri",
+    "value" : "https://biometria.gointerop.com/fhir/sid/template-biometrico",
+    "preferred" : true,
+    "comment" : "URI canônica para o identificador de template biométrico facial de beneficiário."
+  }]
+}

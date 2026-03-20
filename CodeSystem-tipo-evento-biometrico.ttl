@@ -1,0 +1,89 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://biometria.gointerop.com/fhir/CodeSystem/tipo-evento-biometrico> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "tipo-evento-biometrico"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: CodeSystem tipo-evento-biometrico</b></p><a name=\"tipo-evento-biometrico\"> </a><a name=\"hctipo-evento-biometrico\"> </a><p>Este case-sensitive sistema de código <code>https://biometria.gointerop.com/fhir/CodeSystem/tipo-evento-biometrico</code> define o seguinte códigos:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Código</b></td><td><b>Ecrã</b></td><td><b>Definição</b></td></tr><tr><td style=\"white-space:nowrap\">captura-inicial<a name=\"tipo-evento-biometrico-captura-inicial\"> </a></td><td>Captura Inicial</td><td>Captura inicial da biometria facial do beneficiário para cadastro no sistema da operadora ou prestador.</td></tr><tr><td style=\"white-space:nowrap\">autenticacao-presenca<a name=\"tipo-evento-biometrico-autenticacao-presenca\"> </a></td><td>Autenticação de Presença</td><td>Autenticação da presença do beneficiário via biometria facial no sistema da operadora para registro de atendimento.</td></tr><tr><td style=\"white-space:nowrap\">autenticacao-atendimento<a name=\"tipo-evento-biometrico-autenticacao-atendimento\"> </a></td><td>Autenticação de Atendimento</td><td>Autenticação do beneficiário via biometria facial no início do atendimento pelo prestador.</td></tr><tr><td style=\"white-space:nowrap\">autenticacao-teleatendimento<a name=\"tipo-evento-biometrico-autenticacao-teleatendimento\"> </a></td><td>Autenticação de Teleatendimento</td><td>Autenticação do beneficiário via biometria facial no aplicativo da operadora para teleatendimento.</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "https://biometria.gointerop.com/fhir/CodeSystem/tipo-evento-biometrico"^^xsd:anyURI ;
+     fhir:l <https://biometria.gointerop.com/fhir/CodeSystem/tipo-evento-biometrico>
+  ] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "TipoEventoBiometrico"] ; # 
+  fhir:title [ fhir:v "Tipo de Evento Biométrico"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2026-03-20T20:23:12+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "GOInterop Tecnologia LTDA"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "GOInterop Tecnologia LTDA" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://gointerop.com" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "contato@gointerop.com" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Italo Macedo" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "italo@gointerop.com" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Claudio Junior" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "claudio@gointerop.com" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Fernando Araujo" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fernando@gointerop.com" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Classifica o tipo de evento relacionado à biometria facial de beneficiários de planos de saúde, conforme norma orientativa ANS v5."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ;
+         fhir:l <urn:iso:std:iso:3166>
+       ] ;
+       fhir:code [ fhir:v "BR" ] ;
+       fhir:display [ fhir:v "Brazil" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "4"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "captura-inicial" ] ;
+     fhir:display [ fhir:v "Captura Inicial" ] ;
+     fhir:definition [ fhir:v "Captura inicial da biometria facial do beneficiário para cadastro no sistema da operadora ou prestador." ]
+  ] [
+     fhir:code [ fhir:v "autenticacao-presenca" ] ;
+     fhir:display [ fhir:v "Autenticação de Presença" ] ;
+     fhir:definition [ fhir:v "Autenticação da presença do beneficiário via biometria facial no sistema da operadora para registro de atendimento." ]
+  ] [
+     fhir:code [ fhir:v "autenticacao-atendimento" ] ;
+     fhir:display [ fhir:v "Autenticação de Atendimento" ] ;
+     fhir:definition [ fhir:v "Autenticação do beneficiário via biometria facial no início do atendimento pelo prestador." ]
+  ] [
+     fhir:code [ fhir:v "autenticacao-teleatendimento" ] ;
+     fhir:display [ fhir:v "Autenticação de Teleatendimento" ] ;
+     fhir:definition [ fhir:v "Autenticação do beneficiário via biometria facial no aplicativo da operadora para teleatendimento." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

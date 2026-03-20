@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Conformidade - Guia de Implementação FHIR R4 para Biometria Facial de Beneficiários v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"4"}
+    h3,h4,h5,h6{--heading-prefix:"4"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Guia de Implementação FHIR R4 para Biometria Facial de Beneficiários</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - STU1
+
+
+
+  <img alt="Brazil flag" src="assets/images/bra.svg" height="16" title="Brazil"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="casos-de-uso.html">Casos de Uso</a>
+  </li>
+  <li>
+    <a href="arquitetura.html">Arquitetura</a>
+  </li>
+  <li>
+    <a href="conformidade.html">Conformidade</a>
+  </li>
+  <li>
+    <a href="seguranca.html">Segurança</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Conformidade</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Guia de Implementação FHIR R4 para Biometria Facial de Beneficiários - Compilação de desenvolvimento local (v0.1.0) construída pelas ferramentas de compilação FHIR (HL7&reg; FHIR&reg; Standard). Veja o <a href='https://biometria.gointerop.com/fhir/history.html'>Diretório de versões publicadas</a></p><!--EndReleaseHeader-->
+  <h2>Conformidade</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#conformidade" id="markdown-toc-conformidade">Conformidade</a>    <ul>
+      <li><a href="#requisitos-de-conformidade" id="markdown-toc-requisitos-de-conformidade">Requisitos de Conformidade</a>        <ul>
+          <li><a href="#perfis-obrigatórios-shall" id="markdown-toc-perfis-obrigatórios-shall">Perfis Obrigatórios (SHALL)</a></li>
+          <li><a href="#perfis-recomendados-should" id="markdown-toc-perfis-recomendados-should">Perfis Recomendados (SHOULD)</a></li>
+        </ul>
+      </li>
+      <li><a href="#operações-fhir-suportadas" id="markdown-toc-operações-fhir-suportadas">Operações FHIR Suportadas</a></li>
+      <li><a href="#extensions-obrigatórias" id="markdown-toc-extensions-obrigatórias">Extensions Obrigatórias</a></li>
+      <li><a href="#fluxo-alternativo--carteirinha" id="markdown-toc-fluxo-alternativo--carteirinha">Fluxo Alternativo — Carteirinha</a></li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+<h1 id="conformidade">Conformidade</h1>
+
+<h2 id="requisitos-de-conformidade">Requisitos de Conformidade</h2>
+
+<p>Implementações conformes a este guia devem:</p>
+
+<h3 id="perfis-obrigatórios-shall">Perfis Obrigatórios (SHALL)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Perfil</th>
+      <th>Recurso Base</th>
+      <th>Obrigatoriedade</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="StructureDefinition-BeneficiarioBiometria.html"><code class="language-plaintext highlighter-rouge">BeneficiarioBiometria</code></a></td>
+      <td><code class="language-plaintext highlighter-rouge">Patient</code></td>
+      <td>SHALL</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-AutenticacaoBiometricaFacial.html"><code class="language-plaintext highlighter-rouge">AutenticacaoBiometricaFacial</code></a></td>
+      <td><code class="language-plaintext highlighter-rouge">AuditEvent</code></td>
+      <td>SHALL</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-OperadoraSaude.html"><code class="language-plaintext highlighter-rouge">OperadoraSaude</code></a></td>
+      <td><code class="language-plaintext highlighter-rouge">Organization</code></td>
+      <td>SHALL</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="perfis-recomendados-should">Perfis Recomendados (SHOULD)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Perfil</th>
+      <th>Recurso Base</th>
+      <th>Obrigatoriedade</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="StructureDefinition-CapturaBiometricaFacial.html"><code class="language-plaintext highlighter-rouge">CapturaBiometricaFacial</code></a></td>
+      <td><code class="language-plaintext highlighter-rouge">Media</code></td>
+      <td>SHOULD</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-ConsentimentoBiometria.html"><code class="language-plaintext highlighter-rouge">ConsentimentoBiometria</code></a></td>
+      <td><code class="language-plaintext highlighter-rouge">Consent</code></td>
+      <td>SHOULD</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-AtendimentoBiometria.html"><code class="language-plaintext highlighter-rouge">AtendimentoBiometria</code></a></td>
+      <td><code class="language-plaintext highlighter-rouge">Encounter</code></td>
+      <td>SHOULD</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-PrestadorSaude.html"><code class="language-plaintext highlighter-rouge">PrestadorSaude</code></a></td>
+      <td><code class="language-plaintext highlighter-rouge">Organization</code></td>
+      <td>SHOULD</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="operações-fhir-suportadas">Operações FHIR Suportadas</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operação</th>
+      <th>Recurso</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">create</code> (POST)</td>
+      <td><code class="language-plaintext highlighter-rouge">Media</code></td>
+      <td>Registrar captura biométrica inicial (CU 1)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">create</code> (POST)</td>
+      <td><code class="language-plaintext highlighter-rouge">AuditEvent</code></td>
+      <td>Registrar evento de autenticação biométrica (CU 2, 3, 4)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">create</code> (POST)</td>
+      <td><code class="language-plaintext highlighter-rouge">Consent</code></td>
+      <td>Registrar consentimento LGPD do beneficiário</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">read</code> (GET)</td>
+      <td><code class="language-plaintext highlighter-rouge">Patient</code></td>
+      <td>Consultar status biométrico do beneficiário</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">create</code> (POST)</td>
+      <td><code class="language-plaintext highlighter-rouge">Encounter</code></td>
+      <td>Registrar atendimento iniciado após autenticação</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="extensions-obrigatórias">Extensions Obrigatórias</h2>
+
+<p>Ao registrar um <code class="language-plaintext highlighter-rouge">AuditEvent</code> de autenticação biométrica:</p>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">ext-canal-autenticacao</code></strong> (obrigatório): identifica se a autenticação ocorreu via <code class="language-plaintext highlighter-rouge">sistema-operadora</code>, <code class="language-plaintext highlighter-rouge">sistema-prestador</code> ou <code class="language-plaintext highlighter-rouge">app-beneficiario</code>.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">ext-liveness-detection</code></strong> (opcional): indica se prova de vida passiva foi executada e o resultado.</li>
+</ul>
+
+<h2 id="fluxo-alternativo--carteirinha">Fluxo Alternativo — Carteirinha</h2>
+
+<p>Quando o sistema de biometria está inoperante, a norma ANS v5 prevê o fluxo alternativo de apresentação da carteirinha de identificação. Neste caso:</p>
+
+<ul>
+  <li>Nenhum <code class="language-plaintext highlighter-rouge">AuditEvent</code> de autenticação biométrica deve ser registrado.</li>
+  <li>O <code class="language-plaintext highlighter-rouge">Encounter</code> pode ser registrado com nota indicando o uso do fluxo alternativo.</li>
+  <li>O <code class="language-plaintext highlighter-rouge">outcome</code> do <code class="language-plaintext highlighter-rouge">AuditEvent</code> deve ser <code class="language-plaintext highlighter-rouge">#12</code> (falha fatal) se o sistema falhou antes de ser possível a autenticação.</li>
+</ul>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://gointerop.com">GOInterop Tecnologia LTDA</a>.  Package com.gointerop.biometria.fhir#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Mar 20, 2026 20:23+0000">2026-03-20</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

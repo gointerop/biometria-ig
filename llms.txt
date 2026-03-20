@@ -1,0 +1,68 @@
+# com.gointerop.biometria.fhir#0.1.0: Guia de Implementação FHIR R4 para Biometria Facial de Beneficiários
+
+## Pages
+
+* [Index](index.md)
+* [Conformidade](conformidade.md)
+* [Casos de Uso](casos-de-uso.md)
+* [Segurança](seguranca.md)
+* [Artifacts Summary](artifacts.md)
+* [Versionamento](versionamento.md)
+* [Arquitetura](arquitetura.md)
+
+## Resources
+
+### CodeSystems
+
+* [Canal de Autenticação Biométrica](CodeSystem-canal-autenticacao.md)
+* [Resultado da Prova de Vida](CodeSystem-liveness-resultado-cs.md)
+* [Status de Cadastro Biométrico](CodeSystem-status-biometrico-cs.md)
+* [Tipo de Evento Biométrico](CodeSystem-tipo-evento-biometrico.md)
+
+### ValueSets
+
+* [Canal de Autenticação Biométrica](ValueSet-canal-autenticacao-biometrica.md)
+* [Canal de Autenticação Biométrica](ValueSet-canal-autenticacao-vs.md)
+* [Resultado da Prova de Vida](ValueSet-liveness-resultado-vs.md)
+* [Resultado da Verificação Biométrica](ValueSet-resultado-biometrico.md)
+* [Resultado da Verificação Biométrica Facial](ValueSet-resultado-verificacao-biometrica.md)
+* [Status de Cadastro Biométrico](ValueSet-status-biometrico-vs.md)
+
+### Resource Profiles
+
+* [Atendimento com Autenticação Biométrica](StructureDefinition-AtendimentoBiometria.md)
+* [Autenticação Biométrica Facial](StructureDefinition-AutenticacaoBiometricaFacial.md)
+* [Beneficiário com Biometria Facial](StructureDefinition-BeneficiarioBiometria.md)
+* [Captura Biométrica Facial](StructureDefinition-CapturaBiometricaFacial.md)
+* [Consentimento para Biometria Facial](StructureDefinition-ConsentimentoBiometria.md)
+* [MyPatient](StructureDefinition-MyPatient.md)
+* [Operadora de Saúde](StructureDefinition-OperadoraSaude.md)
+* [Prestador de Saúde](StructureDefinition-PrestadorSaude.md)
+
+### Extensions
+
+* [Canal de Autenticação Biométrica](StructureDefinition-ext-canal-autenticacao.md)
+* [Prova de Vida (Liveness Detection)](StructureDefinition-ext-liveness-detection.md)
+* [Status de Cadastro Biométrico](StructureDefinition-ext-status-biometrico.md)
+
+### ImplementationGuides
+
+* [Guia de Implementação FHIR R4 para Biometria Facial de Beneficiários](index.md)
+
+### NamingSystems
+
+* [CarteirinhaBeneficiario](NamingSystem-carteirinha-beneficiario.md)
+* [TemplateBiometrico](NamingSystem-template-biometrico.md)
+
+### Examples
+
+* [exemplo-autenticacao-atendimento (AuditEvent)](AuditEvent-exemplo-autenticacao-atendimento.md)
+* [exemplo-autenticacao-presenca (AuditEvent)](AuditEvent-exemplo-autenticacao-presenca.md)
+* [exemplo-autenticacao-teleatendimento (AuditEvent)](AuditEvent-exemplo-autenticacao-teleatendimento.md)
+* [exemplo-consentimento-biometria (Consent)](Consent-exemplo-consentimento-biometria.md)
+* [exemplo-atendimento (Encounter)](Encounter-exemplo-atendimento.md)
+* [exemplo-captura-biometrica (Media)](Media-exemplo-captura-biometrica.md)
+* [Operadora Saúde Exemplo S.A. (Organization)](Organization-exemplo-operadora.md)
+* [Clínica Prestadora Exemplo LTDA (Organization)](Organization-exemplo-prestador.md)
+* [PatientExample (Patient)](Patient-PatientExample.md)
+* [exemplo-beneficiario (Patient)](Patient-exemplo-beneficiario.md)

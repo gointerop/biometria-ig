@@ -1,0 +1,80 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "tipo-evento-biometrico",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: CodeSystem tipo-evento-biometrico</b></p><a name=\"tipo-evento-biometrico\"> </a><a name=\"hctipo-evento-biometrico\"> </a><p>Este case-sensitive sistema de código <code>https://biometria.gointerop.com/fhir/CodeSystem/tipo-evento-biometrico</code> define o seguinte códigos:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Código</b></td><td><b>Ecrã</b></td><td><b>Definição</b></td></tr><tr><td style=\"white-space:nowrap\">captura-inicial<a name=\"tipo-evento-biometrico-captura-inicial\"> </a></td><td>Captura Inicial</td><td>Captura inicial da biometria facial do beneficiário para cadastro no sistema da operadora ou prestador.</td></tr><tr><td style=\"white-space:nowrap\">autenticacao-presenca<a name=\"tipo-evento-biometrico-autenticacao-presenca\"> </a></td><td>Autenticação de Presença</td><td>Autenticação da presença do beneficiário via biometria facial no sistema da operadora para registro de atendimento.</td></tr><tr><td style=\"white-space:nowrap\">autenticacao-atendimento<a name=\"tipo-evento-biometrico-autenticacao-atendimento\"> </a></td><td>Autenticação de Atendimento</td><td>Autenticação do beneficiário via biometria facial no início do atendimento pelo prestador.</td></tr><tr><td style=\"white-space:nowrap\">autenticacao-teleatendimento<a name=\"tipo-evento-biometrico-autenticacao-teleatendimento\"> </a></td><td>Autenticação de Teleatendimento</td><td>Autenticação do beneficiário via biometria facial no aplicativo da operadora para teleatendimento.</td></tr></table></div>"
+  },
+  "url" : "https://biometria.gointerop.com/fhir/CodeSystem/tipo-evento-biometrico",
+  "version" : "0.1.0",
+  "name" : "TipoEventoBiometrico",
+  "title" : "Tipo de Evento Biométrico",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-03-20T20:23:12+00:00",
+  "publisher" : "GOInterop Tecnologia LTDA",
+  "contact" : [{
+    "name" : "GOInterop Tecnologia LTDA",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://gointerop.com"
+    },
+    {
+      "system" : "email",
+      "value" : "contato@gointerop.com"
+    }]
+  },
+  {
+    "name" : "Italo Macedo",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "italo@gointerop.com",
+      "use" : "work"
+    }]
+  },
+  {
+    "name" : "Claudio Junior",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "claudio@gointerop.com"
+    }]
+  },
+  {
+    "name" : "Fernando Araujo",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "fernando@gointerop.com"
+    }]
+  }],
+  "description" : "Classifica o tipo de evento relacionado à biometria facial de beneficiários de planos de saúde, conforme norma orientativa ANS v5.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "BR",
+      "display" : "Brazil"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 4,
+  "concept" : [{
+    "code" : "captura-inicial",
+    "display" : "Captura Inicial",
+    "definition" : "Captura inicial da biometria facial do beneficiário para cadastro no sistema da operadora ou prestador."
+  },
+  {
+    "code" : "autenticacao-presenca",
+    "display" : "Autenticação de Presença",
+    "definition" : "Autenticação da presença do beneficiário via biometria facial no sistema da operadora para registro de atendimento."
+  },
+  {
+    "code" : "autenticacao-atendimento",
+    "display" : "Autenticação de Atendimento",
+    "definition" : "Autenticação do beneficiário via biometria facial no início do atendimento pelo prestador."
+  },
+  {
+    "code" : "autenticacao-teleatendimento",
+    "display" : "Autenticação de Teleatendimento",
+    "definition" : "Autenticação do beneficiário via biometria facial no aplicativo da operadora para teleatendimento."
+  }]
+}

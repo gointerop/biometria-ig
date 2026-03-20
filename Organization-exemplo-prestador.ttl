@@ -1,0 +1,46 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://biometria.gointerop.com/fhir/Organization/exemplo-prestador> a fhir:Organization ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "exemplo-prestador"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://biometria.gointerop.com/fhir/StructureDefinition/PrestadorSaude"^^xsd:anyURI ;
+       fhir:l <https://biometria.gointerop.com/fhir/StructureDefinition/PrestadorSaude>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: Organization exemplo-prestador</b></p><a name=\"exemplo-prestador\"> </a><a name=\"hcexemplo-prestador\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Perfil: <a href=\"StructureDefinition-PrestadorSaude.html\">Prestador de Saúde</a></p></div><p><b>identifier</b>: <code>https://saude.gov.br/fhir/sid/cnes</code>/9876543, <code>https://receita.gov.br/fhir/sid/cnpj</code>/98.765.432/0001-11</p><p><b>active</b>: true</p><p><b>name</b>: Clínica Prestadora Exemplo LTDA</p><p><b>address</b>: Avenida da Saúde, 500 São Paulo SP 01310-100 BR </p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "https://saude.gov.br/fhir/sid/cnes"^^xsd:anyURI ;
+       fhir:l <https://saude.gov.br/fhir/sid/cnes>
+     ] ;
+     fhir:value [ fhir:v "9876543" ]
+  ] [
+     fhir:system [
+       fhir:v "https://receita.gov.br/fhir/sid/cnpj"^^xsd:anyURI ;
+       fhir:l <https://receita.gov.br/fhir/sid/cnpj>
+     ] ;
+     fhir:value [ fhir:v "98.765.432/0001-11" ]
+  ] ) ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:name [ fhir:v "Clínica Prestadora Exemplo LTDA"] ; # 
+  fhir:address ( [
+     fhir:line ( [ fhir:v "Avenida da Saúde, 500" ] ) ;
+     fhir:city [ fhir:v "São Paulo" ] ;
+     fhir:state [ fhir:v "SP" ] ;
+     fhir:postalCode [ fhir:v "01310-100" ] ;
+     fhir:country [ fhir:v "BR" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

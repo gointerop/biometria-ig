@@ -1,0 +1,56 @@
+{
+  "codeSystems" : [{
+    "url" : "https://biometria.gointerop.com/fhir/ValueSet/canal-autenticacao-biometrica",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "CanalAutenticacaoBiometrica",
+    "title" : "Canal de Autenticação Biométrica",
+    "description" : "Canal utilizado para autenticação biométrica do beneficiário.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-RoleCode"]
+  },
+  {
+    "url" : "https://biometria.gointerop.com/fhir/ValueSet/canal-autenticacao-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "CanalAutenticacaoVS",
+    "title" : "Canal de Autenticação Biométrica",
+    "description" : "Canal utilizado na autenticação biométrica facial do beneficiário.",
+    "systems" : ["https://biometria.gointerop.com/fhir/CodeSystem/canal-autenticacao"]
+  },
+  {
+    "url" : "https://biometria.gointerop.com/fhir/ValueSet/liveness-resultado-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "LivenessResultadoVS",
+    "title" : "Resultado da Prova de Vida",
+    "description" : "Resultado da verificação de prova de vida (liveness detection) passiva.",
+    "systems" : ["https://biometria.gointerop.com/fhir/CodeSystem/liveness-resultado-cs"]
+  },
+  {
+    "url" : "https://biometria.gointerop.com/fhir/ValueSet/resultado-biometrico",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "ResultadoBiometrico",
+    "title" : "Resultado da Verificação Biométrica",
+    "description" : "Resultado da verificação biométrica facial de um beneficiário.",
+    "systems" : ["https://biometria.gointerop.com/fhir/CodeSystem/tipo-evento-biometrico"]
+  },
+  {
+    "url" : "https://biometria.gointerop.com/fhir/ValueSet/resultado-verificacao-biometrica",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "ResultadoVerificacaoBiometrica",
+    "title" : "Resultado da Verificação Biométrica Facial",
+    "description" : "Indica o resultado da comparação biométrica entre a foto capturada e o template armazenado.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"]
+  },
+  {
+    "url" : "https://biometria.gointerop.com/fhir/ValueSet/status-biometrico-vs",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "StatusBiometricoVS",
+    "title" : "Status de Cadastro Biométrico",
+    "description" : "Valores possíveis para o status do cadastro biométrico facial do beneficiário.",
+    "systems" : ["https://biometria.gointerop.com/fhir/CodeSystem/status-biometrico-cs"]
+  }]
+}

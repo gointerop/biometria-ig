@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<AuditEvent xmlns="http://hl7.org/fhir">
+  <id value="exemplo-autenticacao-teleatendimento"/>
+  <meta>
+    <profile value="https://biometria.gointerop.com/fhir/StructureDefinition/AutenticacaoBiometricaFacial"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narrativa gerada: AuditEvent exemplo-autenticacao-teleatendimento</b></p><a name="exemplo-autenticacao-teleatendimento"> </a><a name="hcexemplo-autenticacao-teleatendimento"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Perfil: <a href="StructureDefinition-AutenticacaoBiometricaFacial.html">Autenticação Biométrica Facial</a></p></div><p><b>Canal de Autenticação Biométrica</b>: app-beneficiario</p><blockquote><p><b>Prova de Vida (Liveness Detection)</b></p><ul><li>executado: true</li><li>resultado: aprovado</li></ul></blockquote><p><b>type</b>: DICOM: 110114 (User Authentication)</p><p><b>subtype</b>: <a href="CodeSystem-tipo-evento-biometrico.html#tipo-evento-biometrico-autenticacao-teleatendimento">Tipo de Evento Biométrico: autenticacao-teleatendimento</a> (Autenticação de Teleatendimento)</p><p><b>action</b>: Execute</p><p><b>recorded</b>: 2026-03-20 16:45:00-0300</p><p><b>outcome</b>: Success</p><p><b>outcomeDesc</b>: Fotografia validada com sucesso. Teleatendimento liberado para o beneficiário.</p><blockquote><p><b>agent</b></p><p><b>type</b>: <span title="Códigos:{http://terminology.hl7.org/CodeSystem/v3-ParticipationType PAT}">PAT</span></p><p><b>who</b>: <a href="Patient-exemplo-beneficiario.html">Maria da Silva(official) Female, DoB: 1990-04-15 ( https://saude.gov.br/fhir/sid/cns#898001160152321 (use: official, ))</a></p><p><b>requestor</b>: true</p></blockquote><blockquote><p><b>agent</b></p><p><b>type</b>: <span title="Códigos:{http://terminology.hl7.org/CodeSystem/v3-ParticipationType CST}">custodian</span></p><p><b>who</b>: <a href="Organization-exemplo-operadora.html">Organization Operadora Saúde Exemplo S.A.</a></p><p><b>requestor</b>: false</p></blockquote><h3>Sources</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Observer</b></td></tr><tr><td style="display: none">*</td><td><a href="Organization-exemplo-operadora.html">Organization Operadora Saúde Exemplo S.A.</a></td></tr></table></div>
+  </text>
+  <extension url="https://biometria.gointerop.com/fhir/StructureDefinition/ext-canal-autenticacao">
+    <valueCode value="app-beneficiario"/>
+  </extension>
+  <extension url="https://biometria.gointerop.com/fhir/StructureDefinition/ext-liveness-detection">
+    <extension url="executado">
+      <valueBoolean value="true"/>
+    </extension>
+    <extension url="resultado">
+      <valueCode value="aprovado"/>
+    </extension>
+  </extension>
+  <type>
+    <system value="http://dicom.nema.org/resources/ontology/DCM"/>
+    <code value="110114"/>
+    <display value="User Authentication"/>
+  </type>
+  <subtype>
+    <system value="https://biometria.gointerop.com/fhir/CodeSystem/tipo-evento-biometrico"/>
+    <code value="autenticacao-teleatendimento"/>
+    <display value="Autenticação de Teleatendimento"/>
+  </subtype>
+  <action value="E"/>
+  <recorded value="2026-03-20T16:45:00-03:00"/>
+  <outcome value="0"/>
+  <outcomeDesc value="Fotografia validada com sucesso. Teleatendimento liberado para o beneficiário."/>
+  <agent>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
+        <code value="PAT"/>
+      </coding>
+    </type>
+    <who>
+      <reference value="Patient/exemplo-beneficiario"/>
+    </who>
+    <requestor value="true"/>
+  </agent>
+  <agent>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
+        <code value="CST"/>
+      </coding>
+    </type>
+    <who>
+      <reference value="Organization/exemplo-operadora"/>
+    </who>
+    <requestor value="false"/>
+  </agent>
+  <source>
+    <observer>
+      <reference value="Organization/exemplo-operadora"/>
+    </observer>
+  </source>
+</AuditEvent>

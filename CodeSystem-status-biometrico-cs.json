@@ -1,0 +1,75 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "status-biometrico-cs",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: CodeSystem status-biometrico-cs</b></p><a name=\"status-biometrico-cs\"> </a><a name=\"hcstatus-biometrico-cs\"> </a><p>Este case-sensitive sistema de código <code>https://biometria.gointerop.com/fhir/CodeSystem/status-biometrico-cs</code> define o seguinte códigos:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Código</b></td><td><b>Ecrã</b></td><td><b>Definição</b></td></tr><tr><td style=\"white-space:nowrap\">cadastrado<a name=\"status-biometrico-cs-cadastrado\"> </a></td><td>Cadastrado</td><td>O beneficiário possui biometria facial cadastrada e ativa na operadora.</td></tr><tr><td style=\"white-space:nowrap\">nao-cadastrado<a name=\"status-biometrico-cs-nao-cadastrado\"> </a></td><td>Não Cadastrado</td><td>O beneficiário não possui biometria facial cadastrada na operadora.</td></tr><tr><td style=\"white-space:nowrap\">desativado<a name=\"status-biometrico-cs-desativado\"> </a></td><td>Desativado</td><td>O cadastro de biometria facial do beneficiário foi desativado.</td></tr></table></div>"
+  },
+  "url" : "https://biometria.gointerop.com/fhir/CodeSystem/status-biometrico-cs",
+  "version" : "0.1.0",
+  "name" : "StatusBiometricoCS",
+  "title" : "Status de Cadastro Biométrico",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-03-20T20:23:12+00:00",
+  "publisher" : "GOInterop Tecnologia LTDA",
+  "contact" : [{
+    "name" : "GOInterop Tecnologia LTDA",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://gointerop.com"
+    },
+    {
+      "system" : "email",
+      "value" : "contato@gointerop.com"
+    }]
+  },
+  {
+    "name" : "Italo Macedo",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "italo@gointerop.com",
+      "use" : "work"
+    }]
+  },
+  {
+    "name" : "Claudio Junior",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "claudio@gointerop.com"
+    }]
+  },
+  {
+    "name" : "Fernando Araujo",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "fernando@gointerop.com"
+    }]
+  }],
+  "description" : "Códigos de status para o cadastro de biometria facial do beneficiário.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "BR",
+      "display" : "Brazil"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 3,
+  "concept" : [{
+    "code" : "cadastrado",
+    "display" : "Cadastrado",
+    "definition" : "O beneficiário possui biometria facial cadastrada e ativa na operadora."
+  },
+  {
+    "code" : "nao-cadastrado",
+    "display" : "Não Cadastrado",
+    "definition" : "O beneficiário não possui biometria facial cadastrada na operadora."
+  },
+  {
+    "code" : "desativado",
+    "display" : "Desativado",
+    "definition" : "O cadastro de biometria facial do beneficiário foi desativado."
+  }]
+}

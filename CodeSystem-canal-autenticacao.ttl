@@ -1,0 +1,85 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://biometria.gointerop.com/fhir/CodeSystem/canal-autenticacao> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "canal-autenticacao"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narrativa gerada: CodeSystem canal-autenticacao</b></p><a name=\"canal-autenticacao\"> </a><a name=\"hccanal-autenticacao\"> </a><p>Este case-sensitive sistema de código <code>https://biometria.gointerop.com/fhir/CodeSystem/canal-autenticacao</code> define o seguinte códigos:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Código</b></td><td><b>Ecrã</b></td><td><b>Definição</b></td></tr><tr><td style=\"white-space:nowrap\">sistema-operadora<a name=\"canal-autenticacao-sistema-operadora\"> </a></td><td>Sistema da Operadora</td><td>Autenticação realizada pelo operador via sistema da operadora (presencial).</td></tr><tr><td style=\"white-space:nowrap\">sistema-prestador<a name=\"canal-autenticacao-sistema-prestador\"> </a></td><td>Sistema do Prestador</td><td>Autenticação realizada no início do atendimento no sistema do prestador (presencial).</td></tr><tr><td style=\"white-space:nowrap\">app-beneficiario<a name=\"canal-autenticacao-app-beneficiario\"> </a></td><td>App do Beneficiário</td><td>Autenticação realizada pelo próprio beneficiário via aplicativo da operadora (teleatendimento).</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "https://biometria.gointerop.com/fhir/CodeSystem/canal-autenticacao"^^xsd:anyURI ;
+     fhir:l <https://biometria.gointerop.com/fhir/CodeSystem/canal-autenticacao>
+  ] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "CanalAutenticacao"] ; # 
+  fhir:title [ fhir:v "Canal de Autenticação Biométrica"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2026-03-20T20:23:12+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "GOInterop Tecnologia LTDA"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "GOInterop Tecnologia LTDA" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://gointerop.com" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "contato@gointerop.com" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Italo Macedo" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "italo@gointerop.com" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Claudio Junior" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "claudio@gointerop.com" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Fernando Araujo" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fernando@gointerop.com" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Define o canal pelo qual a autenticação biométrica facial do beneficiário foi realizada."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ;
+         fhir:l <urn:iso:std:iso:3166>
+       ] ;
+       fhir:code [ fhir:v "BR" ] ;
+       fhir:display [ fhir:v "Brazil" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "3"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "sistema-operadora" ] ;
+     fhir:display [ fhir:v "Sistema da Operadora" ] ;
+     fhir:definition [ fhir:v "Autenticação realizada pelo operador via sistema da operadora (presencial)." ]
+  ] [
+     fhir:code [ fhir:v "sistema-prestador" ] ;
+     fhir:display [ fhir:v "Sistema do Prestador" ] ;
+     fhir:definition [ fhir:v "Autenticação realizada no início do atendimento no sistema do prestador (presencial)." ]
+  ] [
+     fhir:code [ fhir:v "app-beneficiario" ] ;
+     fhir:display [ fhir:v "App do Beneficiário" ] ;
+     fhir:definition [ fhir:v "Autenticação realizada pelo próprio beneficiário via aplicativo da operadora (teleatendimento)." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

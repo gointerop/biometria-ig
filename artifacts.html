@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Artifacts Summary - Guia de Implementação FHIR R4 para Biometria Facial de Beneficiários v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"7"}
+    h3,h4,h5,h6{--heading-prefix:"7.0"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Guia de Implementação FHIR R4 para Biometria Facial de Beneficiários</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - STU1
+
+
+
+  <img alt="Brazil flag" src="assets/images/bra.svg" height="16" title="Brazil"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="casos-de-uso.html">Casos de Uso</a>
+  </li>
+  <li>
+    <a href="arquitetura.html">Arquitetura</a>
+  </li>
+  <li>
+    <a href="conformidade.html">Conformidade</a>
+  </li>
+  <li>
+    <a href="seguranca.html">Segurança</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Artifacts Summary</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Guia de Implementação FHIR R4 para Biometria Facial de Beneficiários - Compilação de desenvolvimento local (v0.1.0) construída pelas ferramentas de compilação FHIR (HL7&reg; FHIR&reg; Standard). Veja o <a href='https://biometria.gointerop.com/fhir/history.html'>Diretório de versões publicadas</a></p><!--EndReleaseHeader-->
+  <h2>Artifacts Summary</h2>
+  
+  
+  
+  <!--DO NOT EDIT THIS FILE - It is generated by https://github.com/HL7/ig-template-base/blob/master/scripts/createArtifactSummary.xslt and any changes made will be overwritten--><div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://hl7.org/fhir"
+     xmlns:html="http://www.w3.org/1999/xhtml"
+     class="markdown-toc">
+   <p>Contents:</p>
+   <ul>
+      <li>
+         <a href="#1">Structures: Resource Profiles</a>
+      </li>
+      <li>
+         <a href="#2">Structures: Extension Definitions</a>
+      </li>
+      <li>
+         <a href="#3">Terminology: Value Sets</a>
+      </li>
+      <li>
+         <a href="#4">Terminology: Code Systems</a>
+      </li>
+      <li>
+         <a href="#5">Terminology: Naming Systems</a>
+      </li>
+      <li>
+         <a href="#6">Example: Example Instances</a>
+      </li>
+   </ul>
+</div>
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://hl7.org/fhir"
+     xmlns:html="http://www.w3.org/1999/xhtml">
+   <p>This page provides a list of the FHIR artifacts defined as part of this implementation guide.</p>
+   <a name="1"> </a>
+   <h3>Structures: Resource Profiles </h3>
+    <p>These define constraints on FHIR resources for systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-AtendimentoBiometria.html"
+                  title="StructureDefinition/AtendimentoBiometria">Atendimento com Autenticação Biométrica</a>
+            </td>
+            <td>
+<p>Atendimento de saúde onde o beneficiário foi autenticado via biometria facial no início. Vincula a autenticação biométrica ao atendimento real. Cobre os Casos de Uso 2, 3 e 4 da norma ANS v5.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-AutenticacaoBiometricaFacial.html"
+                  title="StructureDefinition/AutenticacaoBiometricaFacial">Autenticação Biométrica Facial</a>
+            </td>
+            <td>
+<p>Registro de evento de autenticação biométrica facial do beneficiário. Cobre os Casos de Uso 2, 3 e 4 da norma ANS v5: autenticação de presença, autenticação de atendimento e autenticação via app.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-BeneficiarioBiometria.html"
+                  title="StructureDefinition/BeneficiarioBiometria">Beneficiário com Biometria Facial</a>
+            </td>
+            <td>
+<p>Perfil de beneficiário de plano de saúde com suporte a identificação por biometria facial, conforme norma orientativa ANS v5.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-CapturaBiometricaFacial.html"
+                  title="StructureDefinition/CapturaBiometricaFacial">Captura Biométrica Facial</a>
+            </td>
+            <td>
+<p>Registro da captura inicial da biometria facial do beneficiário. Corresponde ao Caso de Uso 1: Captura Inicial da Biometria Facial (ANS v5).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ConsentimentoBiometria.html"
+                  title="StructureDefinition/ConsentimentoBiometria">Consentimento para Biometria Facial</a>
+            </td>
+            <td>
+<p>Consentimento do beneficiário para coleta, armazenamento e uso da biometria facial pela operadora de saúde, conforme exigência da LGPD (Lei 13.709/2018).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-MyPatient.html"
+                  title="StructureDefinition/MyPatient">MyPatient</a>
+            </td>
+            <td>
+<p>An example profile of the Patient resource.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-OperadoraSaude.html"
+                  title="StructureDefinition/OperadoraSaude">Operadora de Saúde</a>
+            </td>
+            <td>
+<p>Operadora de plano de saúde responsável pelo armazenamento e validação da biometria facial dos beneficiários.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PrestadorSaude.html"
+                  title="StructureDefinition/PrestadorSaude">Prestador de Saúde</a>
+            </td>
+            <td>
+<p>Prestador de serviços de saúde (clínica, hospital, consultório) que utiliza biometria facial para autenticação do beneficiário no início do atendimento.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="2"> </a>
+   <h3>Structures: Extension Definitions </h3>
+    <p>These define constraints on FHIR data types for systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ext-canal-autenticacao.html"
+                  title="StructureDefinition/ext-canal-autenticacao">Canal de Autenticação Biométrica</a>
+            </td>
+            <td>
+<p>Indica o canal pelo qual a autenticação biométrica facial do beneficiário foi realizada: sistema da operadora, sistema do prestador ou aplicativo do beneficiário.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ext-liveness-detection.html"
+                  title="StructureDefinition/ext-liveness-detection">Prova de Vida (Liveness Detection)</a>
+            </td>
+            <td>
+<p>Indica se a prova de vida passiva (liveness detection) foi executada durante a autenticação biométrica e qual o resultado.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ext-status-biometrico.html"
+                  title="StructureDefinition/ext-status-biometrico">Status de Cadastro Biométrico</a>
+            </td>
+            <td>
+<p>Indica o status do cadastro de biometria facial do beneficiário na operadora de saúde.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="3"> </a>
+   <h3>Terminology: Value Sets </h3>
+    <p>These define sets of codes used by systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-canal-autenticacao-biometrica.html"
+                  title="ValueSet/canal-autenticacao-biometrica">Canal de Autenticação Biométrica</a>
+            </td>
+            <td>
+<p>Canal utilizado para autenticação biométrica do beneficiário.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-canal-autenticacao-vs.html"
+                  title="ValueSet/canal-autenticacao-vs">Canal de Autenticação Biométrica</a>
+            </td>
+            <td>
+<p>Canal utilizado na autenticação biométrica facial do beneficiário.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-liveness-resultado-vs.html"
+                  title="ValueSet/liveness-resultado-vs">Resultado da Prova de Vida</a>
+            </td>
+            <td>
+<p>Resultado da verificação de prova de vida (liveness detection) passiva.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-resultado-biometrico.html"
+                  title="ValueSet/resultado-biometrico">Resultado da Verificação Biométrica</a>
+            </td>
+            <td>
+<p>Resultado da verificação biométrica facial de um beneficiário.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-resultado-verificacao-biometrica.html"
+                  title="ValueSet/resultado-verificacao-biometrica">Resultado da Verificação Biométrica Facial</a>
+            </td>
+            <td>
+<p>Indica o resultado da comparação biométrica entre a foto capturada e o template armazenado.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-status-biometrico-vs.html"
+                  title="ValueSet/status-biometrico-vs">Status de Cadastro Biométrico</a>
+            </td>
+            <td>
+<p>Valores possíveis para o status do cadastro biométrico facial do beneficiário.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="4"> </a>
+   <h3>Terminology: Code Systems </h3>
+    <p>These define new code systems used by systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-canal-autenticacao.html"
+                  title="CodeSystem/canal-autenticacao">Canal de Autenticação Biométrica</a>
+            </td>
+            <td>
+<p>Define o canal pelo qual a autenticação biométrica facial do beneficiário foi realizada.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-liveness-resultado-cs.html"
+                  title="CodeSystem/liveness-resultado-cs">Resultado da Prova de Vida</a>
+            </td>
+            <td>
+<p>Códigos para resultado da verificação de prova de vida passiva (liveness detection).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-status-biometrico-cs.html"
+                  title="CodeSystem/status-biometrico-cs">Status de Cadastro Biométrico</a>
+            </td>
+            <td>
+<p>Códigos de status para o cadastro de biometria facial do beneficiário.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-tipo-evento-biometrico.html"
+                  title="CodeSystem/tipo-evento-biometrico">Tipo de Evento Biométrico</a>
+            </td>
+            <td>
+<p>Classifica o tipo de evento relacionado à biometria facial de beneficiários de planos de saúde, conforme norma orientativa ANS v5.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="5"> </a>
+   <h3>Terminology: Naming Systems </h3>
+    <p>These define identifier and/or code system identities used by systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="NamingSystem-carteirinha-beneficiario.html"
+                  title="NamingSystem/carteirinha-beneficiario">carteirinha-beneficiario</a>
+            </td>
+            <td>
+<p>Identificador da carteirinha (cartão de identificação) do beneficiário emitida pela operadora de plano de saúde.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="NamingSystem-template-biometrico.html"
+                  title="NamingSystem/template-biometrico">template-biometrico</a>
+            </td>
+            <td>
+<p>Identificador único do template biométrico facial armazenado pela operadora para o beneficiário.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="6"> </a>
+   <h3>Example: Example Instances </h3>
+    <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-PatientExample.html" title="Patient/PatientExample">PatientExample</a>
+            </td>
+            <td>
+<p>An example of a patient with a license to krill.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Encounter-exemplo-atendimento.html"
+                  title="Encounter/exemplo-atendimento">exemplo-atendimento</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="AuditEvent-exemplo-autenticacao-atendimento.html"
+                  title="AuditEvent/exemplo-autenticacao-atendimento">exemplo-autenticacao-atendimento</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="AuditEvent-exemplo-autenticacao-presenca.html"
+                  title="AuditEvent/exemplo-autenticacao-presenca">exemplo-autenticacao-presenca</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="AuditEvent-exemplo-autenticacao-teleatendimento.html"
+                  title="AuditEvent/exemplo-autenticacao-teleatendimento">exemplo-autenticacao-teleatendimento</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-exemplo-beneficiario.html"
+                  title="Patient/exemplo-beneficiario">exemplo-beneficiario</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Media-exemplo-captura-biometrica.html"
+                  title="Media/exemplo-captura-biometrica">exemplo-captura-biometrica</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Consent-exemplo-consentimento-biometria.html"
+                  title="Consent/exemplo-consentimento-biometria">exemplo-consentimento-biometria</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-exemplo-operadora.html"
+                  title="Organization/exemplo-operadora">exemplo-operadora</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-exemplo-prestador.html"
+                  title="Organization/exemplo-prestador">exemplo-prestador</a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+      </tbody>
+   </table>
+</div>
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://gointerop.com">GOInterop Tecnologia LTDA</a>.  Package com.gointerop.biometria.fhir#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Mar 20, 2026 20:23+0000">2026-03-20</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+
